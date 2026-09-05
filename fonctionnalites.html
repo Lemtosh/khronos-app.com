@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Fonctionnalités — Frise, calcul du CRM et alertes | Khronos</title>
+<meta name="description" content="Frise chronologique des périodes, calcul du coefficient de réduction-majoration, perte de bonus après interruption, sinistre non impacté, alertes rouges et ambres : le détail de chaque contrôle de Khronos.">
+<link rel="canonical" href="https://khronos-app.com/fonctionnalites.html">
+
+<meta name="theme-color" content="#0d0f13">
+<meta name="robots" content="index, follow, max-image-preview:large">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Khronos">
+<meta property="og:url" content="https://khronos-app.com/fonctionnalites.html">
+<meta property="og:title" content="Fonctionnalités — Frise, calcul du CRM et alertes | Khronos">
+<meta property="og:description" content="Le détail de chaque contrôle : frise chronologique, calcul du CRM, perte de bonus, sinistre non impacté, alertes rouges et ambres.">
+<meta property="og:image" content="https://khronos-app.com/assets/img/khronos-ecran.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/assets/img/logo-khronos-256.png">
+<link rel="stylesheet" href="/assets/css/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://khronos-app.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Fonctionnalités", "item": "https://khronos-app.com/fonctionnalites.html" }
+  ]
+}
+</script>
+</head>
+
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="/">
+      <img src="/assets/img/logo-khronos-256.png" alt="" width="34" height="34">
+      <span>Khronos</span>
+    </a>
+
+    <nav aria-label="Navigation principale">
+      <ul class="nav-links" id="nav-menu" hidden>
+        <li><a href="/fonctionnalites.html" aria-current="page">Fonctionnalités</a></li>
+        <li><a href="/tarifs.html">Tarifs</a></li>
+        <li><a href="/#securite">Sécurité</a></li>
+        <li><a href="/#faq">Questions</a></li>
+        <li class="nav-mobile-cta"><a href="/telechargement/">Télécharger</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="/telechargement/">Télécharger</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Ouvrir le menu">
+        <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="contenu">
+
+  <div class="page-head">
+    <div class="wrap">
+      <p class="eyebrow" style="color: var(--coral-bright);">Fonctionnalités</p>
+      <h1>Chaque contrôle, et ce qu'il démontre.</h1>
+      <p>
+        Khronos ne rend pas un avis : il rejoue le calcul et dit ce qui, dans le dossier
+        saisi, ne peut pas être vrai. Voici précisément ce qu'il vérifie.
+      </p>
+    </div>
+  </div>
+
+  <!-- ══ La frise ═══════════════════════════════════════════════════════ -->
+  <section id="frise">
+    <div class="wrap">
+      <div class="split">
+        <div>
+          <p class="eyebrow">01 — La frise</p>
+          <h2>Voir l'antériorité au lieu de la reconstituer.</h2>
+          <p class="lead mt-2">
+            Chaque période saisie devient une barre sur un axe commun, avec une couleur par
+            contrat. Ce qui se chevauchait dans un tableau se sépare, et ce qui manquait
+            devient un vide qu'on ne peut plus rater.
+          </p>
+
+          <ul class="checklist mt-3">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              <span><strong>Fenêtre glissante</strong> remontant depuis la date d'effet — 36 mois par défaut, ajustable.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              <span><strong>Couverture totale en mois pleins</strong>, avec le reliquat de jours affiché à part plutôt que noyé dans un arrondi.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              <span><strong>Interruption la plus longue</strong>, avec ses deux bornes et sa durée exacte.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              <span><strong>Les sinistres posés à leur date</strong>, sur la période qui les porte.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="window window-light">
+          <div class="window-bar">
+            <i></i><i></i><i></i>
+            <em class="window-title">Frise antécédents — 36 mois</em>
+          </div>
+          <div class="window-body">
+            <img src="/assets/img/khronos-ecran.png"
+                 alt="La frise Khronos sur 36 mois : deux contrats en barres de couleur, la couverture calculée à 29 mois et une interruption de 7 mois signalée."
+                 width="1494" height="933" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ Le CRM ═════════════════════════════════════════════════════════ -->
+  <section class="band-dark" id="crm">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">02 — Le coefficient</p>
+        <h2>Le CRM déclaré, confronté au CRM possible.</h2>
+        <p>
+          Khronos ne se contente pas d'enregistrer le coefficient annoncé : il le recalcule
+          depuis le début de l'historique, échéance par échéance, et vous dit s'il est
+          atteignable.
+        </p>
+      </div>
+
+      <div class="grid grid-2">
+        <article class="card reveal">
+          <h3>La règle, appliquée à la lettre</h3>
+          <p>
+            Chaque année sans sinistre engageant retire 5 %. Chaque sinistre imputable à une
+            échéance annule cette réduction et applique une majoration&nbsp;: ×&nbsp;1,125 pour
+            une responsabilité partagée, ×&nbsp;1,25 pour une responsabilité entière. Le résultat
+            est tronqué à deux décimales après chaque multiplication, et cette valeur tronquée
+            devient la base de l'année suivante — pas la valeur exacte.
+          </p>
+        </article>
+
+        <article class="card reveal">
+          <h3>Quelle échéance porte le sinistre</h3>
+          <p>
+            L'échéance contractuelle est prioritaire dès qu'elle peut porter le sinistre. À
+            défaut — échéance non renseignée, ou sinistre postérieur à la dernière échéance de
+            sa période — les anniversaires du permis prennent le relais et prolongent le calcul
+            annuel jusqu'à la date d'effet. Aucun sinistre ne disparaît du calcul par
+            accident.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ Perte de bonus ═════════════════════════════════════════════════ -->
+  <section id="perte-de-bonus">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">03 — La perte de bonus</p>
+        <h2>Une interruption trop longue remet le compteur à 1,00.</h2>
+        <p>
+          Une interruption d'assurance de plus de 24 mois qui court jusqu'à la date d'effet
+          fait perdre le bonus acquis. Khronos la détecte et le dit — mais seulement quand
+          c'est vraiment le cas.
+        </p>
+      </div>
+
+      <div class="grid grid-3">
+        <article class="card card-hover reveal">
+          <span class="card-icon is-amber" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 11-3-6.7"/><path d="M21 4v5h-5"/></svg>
+          </span>
+          <h3>Seule l'interruption finale compte</h3>
+          <p>
+            Une reprise d'assurance, même de quelques semaines, referme le compteur. Un trou
+            ancien suivi d'un contrat n'entraîne aucune perte, et Khronos ne le signale pas.
+          </p>
+        </article>
+
+        <article class="card card-hover reveal">
+          <span class="card-icon is-amber" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V8m5 12V4m5 16v-9m5 9V6"/></svg>
+          </span>
+          <h3>Le bonus seulement, jamais le malus</h3>
+          <p>
+            Un coefficient supérieur à 1 n'est pas effacé par une interruption. La règle
+            n'allège personne : elle retire un avantage acquis, elle ne remet pas une
+            majoration à zéro.
+          </p>
+        </article>
+
+        <article class="card card-hover reveal">
+          <span class="card-icon is-green" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg>
+          </span>
+          <h3>Une frise vide ne déclenche rien</h3>
+          <p>
+            Tant qu'aucune période n'est saisie, aucune alerte n'apparaît. Une alerte affichée
+            avant toute saisie serait vraie tous les jours — et on apprendrait vite à ne plus
+            la lire.
+          </p>
+        </article>
+      </div>
+
+      <div class="callout is-green mt-3" style="max-width: 76ch;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16v.5"/></svg>
+        <div>
+          <strong>Le seuil se mesure en dates, pas en jours</strong>
+          <p>
+            « 24 mois et un jour » est une borne d'anniversaire, pas un produit de 24 × 30.
+            Khronos compare des dates de date à date : les mois courts ne décalent jamais
+            le verdict.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ Sinistre non impacté ═══════════════════════════════════════════ -->
+  <section class="band-soft" id="sinistre-non-impacte">
+    <div class="wrap">
+      <div class="split">
+        <div>
+          <p class="eyebrow">04 — Le sinistre non impacté</p>
+          <h2>Le sinistre trop récent pour avoir été appliqué.</h2>
+          <p class="lead mt-2">
+            Un sinistre engageant survenu moins de deux mois avant la dernière échéance de sa
+            période n'a pu être répercuté ni sur cette échéance, ni sur aucune autre. Le
+            coefficient déclaré est alors probablement trop favorable, sans qu'aucune ligne
+            du relevé ne le dise.
+          </p>
+          <p class="mt-2 muted">
+            Khronos ne regarde jamais au-delà de la période qui porte le sinistre : une
+            période postérieure relève d'un autre contrat, et l'y rattacher produirait une
+            fausse alerte.
+          </p>
+        </div>
+
+        <div>
+          <div class="callout is-amber">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 16H3L12 3z"/><path d="M12 9v4M12 16.5v.5"/></svg>
+            <div>
+              <strong>Ambre, et pas rouge — délibérément</strong>
+              <p>
+                Rien n'est démontré faux : c'est une vérification à faire auprès de
+                l'assureur précédent. Réserver le rouge à ce qui est prouvé est ce qui
+                garde le rouge crédible.
+              </p>
+            </div>
+          </div>
+
+          <div class="callout is-green" style="margin-top: 0.9rem;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+            <div>
+              <strong>Deux mois, en anniversaire de date</strong>
+              <p>
+                La borne se calcule de date à date, jamais en soixante jours. Et elle se
+                règle dans les paramètres si votre pratique diffère.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ Les alertes ════════════════════════════════════════════════════ -->
+  <section id="alertes">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">05 — Les alertes</p>
+        <h2>Rouge démontré, ambre supposé. Jamais l'inverse.</h2>
+        <p>
+          C'est la distinction qui fait qu'on continue de lire les alertes au bout de six
+          mois. Khronos ne dégrade jamais une certitude en soupçon pour être prudent, et ne
+          présente jamais un soupçon comme une preuve.
+        </p>
+      </div>
+
+      <div class="grid grid-2">
+        <article class="card reveal">
+          <span class="card-icon is-red" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16v.5"/></svg>
+          </span>
+          <h3>Rouge — la contradiction est prouvée</h3>
+          <p>
+            Le calcul ne repose que sur des sinistres rattachés à une échéance connue. S'il
+            contredit déjà le coefficient annoncé, celui-ci est impossible : aucune saisie
+            complémentaire ne le rendra vrai.
+          </p>
+        </article>
+
+        <article class="card reveal">
+          <span class="card-icon is-amber" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 16H3L12 3z"/><path d="M12 9v4M12 16.5v.5"/></svg>
+          </span>
+          <h3>Ambre — il reste quelque chose à vérifier</h3>
+          <p>
+            Un sinistre qu'aucune période saisie ne couvre a pu tomber sous un contrat dont
+            l'échéance le rattrapait. On ne le saura qu'en saisissant la période manquante —
+            et l'alerte le dit ainsi.
+          </p>
+        </article>
+      </div>
+
+      <div class="callout is-amber mt-3" style="max-width: 76ch;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16v.5"/></svg>
+        <div>
+          <strong>Une ligne, une alerte</strong>
+          <p>
+            Ancienneté du permis, plancher du coefficient, interruption, sinistre non
+            impacté : les quatre garde-fous sont réunis en un seul message. Quatre pastilles
+            côte à côte ne se lisent pas — elles se contournent.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ Les outils ═════════════════════════════════════════════════════ -->
+  <section class="band-dark" id="outils">
+    <div class="wrap">
+      <div class="section-head centered">
+        <p class="eyebrow">06 — Les outils</p>
+        <h2>Ce qu'on calculait à côté, dans la barre du haut.</h2>
+        <p>
+          Trois outils accessibles sans quitter le dossier en cours, et sans rouvrir une
+          calculatrice ou un tableur.
+        </p>
+      </div>
+
+      <div class="grid grid-3">
+        <article class="card reveal">
+          <span class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+          </span>
+          <h3>Écart entre deux dates</h3>
+          <p>
+            Le nombre exact de mois et de jours entre deux dates, calculé en arithmétique de
+            calendrier — les mois de 28 et de 31 jours comptent pour ce qu'ils sont.
+          </p>
+        </article>
+
+        <article class="card reveal">
+          <span class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+          </span>
+          <h3>Échéance Hamon</h3>
+          <p>
+            La date à partir de laquelle la résiliation infra-annuelle devient possible,
+            à partir de la date de souscription du contrat en cours.
+          </p>
+        </article>
+
+        <article class="card reveal">
+          <span class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8M8 11h2m3 0h3M8 15h2m3 0h3"/></svg>
+          </span>
+          <h3>Calculatrice CRM</h3>
+          <p>
+            Le coefficient projeté sur n années, avec ou sans sinistre, indépendamment du
+            dossier ouvert — pour répondre à un client au téléphone.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ Paramétrage & confort ══════════════════════════════════════════ -->
+  <section id="parametrage">
+    <div class="wrap">
+      <div class="split">
+        <div>
+          <p class="eyebrow">07 — Le paramétrage</p>
+          <h2>Vos seuils, pas les nôtres.</h2>
+          <p class="lead mt-2">
+            Les valeurs de référence de Khronos sont des réglages, pas des constantes cachées
+            dans le programme. Le calcul les relit à chaque exécution : une modification
+            s'applique immédiatement, sur tous les dossiers ouverts.
+          </p>
+
+          <ul class="checklist mt-3">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              <span><strong>Reliquat de jours</strong> non comptabilisé dans la couverture (15 par défaut).</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              <span><strong>Durée d'interruption</strong> entraînant la perte du bonus (24 mois par défaut).</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              <span><strong>Fenêtre du sinistre non impacté</strong> avant la dernière échéance (2 mois par défaut).</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              <span><strong>Export et restauration</strong> de l'ensemble des dossiers et des réglages, en un fichier.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="eyebrow">08 — Le confort</p>
+          <h2>Fait pour être utilisé toute la journée.</h2>
+          <p class="lead mt-2">
+            Khronos est un outil de poste de travail, pas une démonstration. Ce qui se répète
+            cent fois par semaine doit rester rapide au clavier et reposant pour les yeux.
+          </p>
+
+          <ul class="checklist mt-3">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              <span><strong>Plusieurs dossiers en onglets</strong>, enregistrés automatiquement.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              <span><strong>Colonnes redimensionnables</strong> au glisser-déposer, largeurs conservées.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              <span><strong>Thème clair ou sombre</strong>, couleur d'accent et police au choix.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              <span><strong>Mise à jour proposée au démarrage</strong>, jamais imposée, dossiers conservés.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="wrap">
+      <div class="cta-final">
+        <h2>Le plus simple reste de l'essayer.</h2>
+        <p>Téléchargez Khronos et passez-lui un dossier dont vous connaissez déjà la réponse.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary btn-lg" href="/telechargement/">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"/></svg>
+            Télécharger pour Windows
+          </a>
+          <a class="btn btn-lg btn-on-dark" href="/tarifs.html">Voir les tarifs</a>
+        </div>
+        <p class="fine">Windows 10 et 11 · moins de 4 Mo · aucune inscription</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="/">
+          <img src="/assets/img/logo-khronos-256.png" alt="" width="34" height="34">
+          <span>Khronos</span>
+        </a>
+        <p>
+          La vérification des antécédents d'assurance auto et moto,
+          sur votre poste et hors ligne.
+        </p>
+      </div>
+      <div>
+        <h4>Produit</h4>
+        <ul>
+          <li><a href="/fonctionnalites.html">Fonctionnalités</a></li>
+          <li><a href="/tarifs.html">Tarifs</a></li>
+          <li><a href="/telechargement/">Télécharger</a></li>
+          <li><a href="/#faq">Questions fréquentes</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Légal</h4>
+        <ul>
+          <li><a href="/mentions-legales.html">Mentions légales</a></li>
+          <li><a href="/confidentialite.html">Confidentialité</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:contact@khronos-app.com">contact@khronos-app.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Khronos. Tous droits réservés.</span>
+      <span>Windows 10 et 11 · Version 1.0.2</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js" defer></script>
+</body>
+</html>
