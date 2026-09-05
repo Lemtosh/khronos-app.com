@@ -20,7 +20,7 @@ fichier, on l'édite, on le déploie tel quel.
 ├── robots.txt · sitemap.xml · favicon.ico
 └── assets/
     ├── css/style.css          SOURCE UNIQUE des couleurs et des primitives
-    ├── js/main.js             menu mobile, liseré d'en-tête, apparitions
+    ├── js/main.js             version courante, menu mobile, liseré, apparitions
     └── img/                   logo + captures d'écran
 ```
 
@@ -48,7 +48,6 @@ Ces points sont marqués `TODO` dans le HTML :
 
 | Où | Quoi |
 |---|---|
-| `telechargement/index.html` | l'URL réelle de l'installeur (`href="#"` aujourd'hui) |
 | `tarifs.html` | le lien de paiement Stripe (deux boutons en `href="#"`) |
 | `mentions-legales.html` | identité de l'éditeur, du directeur de publication et de l'hébergeur |
 | toutes les pages | l'adresse de contact (`contact@chronofrise.com` par défaut) |

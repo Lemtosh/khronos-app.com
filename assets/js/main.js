@@ -1,6 +1,7 @@
 /* ChronoFrise, site vitrine.
-   Trois comportements et pas un de plus : menu mobile, liseré de l'en-tête au
-   défilement, apparition des blocs. Tout le reste du site fonctionne sans JS.
+   Quatre comportements : version courante, menu mobile, liseré de l'en-tête
+   au défilement et apparition des blocs. Le téléchargement garde une URL de
+   secours dans le HTML afin de rester disponible sans JavaScript.
    C'est ce qui garantit qu'un robot d'indexation voit exactement le même
    contenu qu'un visiteur. */
 (function () {
@@ -9,6 +10,77 @@
   /* Marque la page comme « JS actif ». Les styles d'apparition sont préfixés
      par `.js` : sans cette classe, rien n'est masqué au départ. */
   document.documentElement.classList.add('js');
+
+  /* ── Version courante ───────────────────────────────────────────────────
+     `latest.json` est aussi utilisé par l'updater de l'application. Le site
+     reprend donc exactement la même version et surtout l'URL publiée dans le
+     manifeste, sans tenter de reconstruire le nom de l'installeur. */
+  var manifestUrl = 'https://khronos-maj.pages.dev/latest.json';
+
+  fetch(manifestUrl, { cache: 'no-cache' })
+    .then(function (response) {
+      if (!response.ok) throw new Error('Manifeste indisponible (' + response.status + ')');
+      return response.json();
+    })
+    .then(function (release) {
+      var platform = release.platforms && release.platforms['windows-x86_64'];
+
+      if (!release.version || !release.pub_date || !platform || !platform.url) {
+        throw new Error('Manifeste incomplet');
+      }
+
+      var downloadUrl = new URL(platform.url);
+      if (downloadUrl.protocol !== 'https:' || downloadUrl.hostname !== 'khronos-maj.pages.dev') {
+        throw new Error('URL de téléchargement non autorisée');
+      }
+
+      document.querySelectorAll('[data-app-version]').forEach(function (element) {
+        element.textContent = release.version;
+      });
+
+      document.querySelectorAll('[data-version-template]').forEach(function (element) {
+        var value = element.getAttribute('data-version-template').replace('{version}', release.version);
+        if (element.tagName === 'META') element.setAttribute('content', value);
+        else element.textContent = value;
+      });
+
+      document.querySelectorAll('[data-download-windows]').forEach(function (link) {
+        link.href = downloadUrl.href;
+      });
+
+      var releaseDate = new Date(release.pub_date);
+      if (!isNaN(releaseDate.getTime())) {
+        document.querySelectorAll('[data-release-date]').forEach(function (element) {
+          element.textContent = new Intl.DateTimeFormat('fr-FR', {
+            day: 'numeric',
+            month: 'long',
+            year: 'numeric',
+            timeZone: 'UTC'
+          }).format(releaseDate);
+          element.setAttribute('datetime', releaseDate.toISOString().slice(0, 10));
+        });
+      }
+
+      var softwareSchema = document.querySelector('[data-software-schema]');
+      if (softwareSchema) {
+        try {
+          var schema = JSON.parse(softwareSchema.textContent);
+          var applications = schema['@graph'] || [schema];
+          applications.forEach(function (item) {
+            if (item['@type'] !== 'SoftwareApplication') return;
+            item.softwareVersion = release.version;
+            item.downloadUrl = downloadUrl.href;
+          });
+          softwareSchema.textContent = JSON.stringify(schema);
+        } catch (error) {
+          console.warn('Données structurées non actualisées :', error);
+        }
+      }
+    })
+    .catch(function (error) {
+      /* L'URL 1.0.3 présente dans le HTML reste utilisable en cas d'échec. */
+      console.warn('Version dynamique non actualisée :', error);
+    });
 
   /* ── Menu mobile ─────────────────────────────────────────────────────── */
   var toggle = document.querySelector('.nav-toggle');

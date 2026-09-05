@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Télécharger pour Windows (version 1.0.2) | ChronoFrise</title>
+<title data-version-template="Télécharger pour Windows (version {version}) | ChronoFrise">Télécharger pour Windows (version 1.0.3) | ChronoFrise</title>
 <meta name="description" content="Téléchargez ChronoFrise pour Windows 10 et 11 : moins de 2 Mo, installation en une minute, sept jours d'essai. Vérification des antécédents d'assurance hors ligne.">
 <link rel="canonical" href="https://chronofrise.com/telechargement/">
 
@@ -15,7 +15,7 @@
 <meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="ChronoFrise">
 <meta property="og:url" content="https://chronofrise.com/telechargement/">
-<meta property="og:title" content="Télécharger ChronoFrise pour Windows (version 1.0.2)">
+<meta property="og:title" data-version-template="Télécharger ChronoFrise pour Windows (version {version})" content="Télécharger ChronoFrise pour Windows (version 1.0.3)">
 <meta property="og:description" content="Moins de 2 Mo, installation en une minute, sept jours d'essai. Windows 10 et 11.">
 <meta property="og:image" content="https://chronofrise.com/assets/img/chronofrise-ecran.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -71,7 +71,7 @@
   <section class="hero" id="telecharger">
     <div class="wrap">
       <div style="max-width: 62ch;">
-        <p class="hero-badge"><span class="dot"></span> Version 1.0.2 · 5 septembre 2026</p>
+        <p class="hero-badge"><span class="dot"></span> Version <span data-app-version>1.0.3</span> · <time data-release-date datetime="2026-09-05">5 septembre 2026</time></p>
 
         <h1>Télécharger <span class="accent">ChronoFrise</span> pour Windows.</h1>
 
@@ -81,13 +81,10 @@
         </p>
 
         <div class="btn-row">
-          <!-- L'installeur est servi par le projet Cloudflare Pages « khronos-maj »,
-               le même que celui qui héberge `latest.json` pour la mise à jour automatique.
-               Une seule source : le site et l'updater ne peuvent pas diverger.
-               ⚠️ À chaque livraison, reporter ici le nouveau numéro de version. -->
-          <a class="btn btn-primary btn-lg" href="https://khronos-maj.pages.dev/1.0.2/Khronos_1.0.2_x64-setup.exe">
+          <!-- `latest.json` actualise ce lien. Cette URL reste le repli sans JavaScript. -->
+          <a class="btn btn-primary btn-lg" data-download-windows href="https://khronos-maj.pages.dev/1.0.3/ChronoFrise_1.0.3_x64-setup.exe">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"/></svg>
-            ChronoFrise 1.0.2 · Installeur Windows
+            ChronoFrise <span data-app-version>1.0.3</span> · Installeur Windows
           </a>
         </div>
 
@@ -253,7 +250,7 @@
     </div>
     <div class="footer-bottom">
       <span>© 2026 ChronoFrise. Tous droits réservés.</span>
-      <span>Windows 10 et 11 · Version 1.0.2</span>
+      <span>Windows 10 et 11 · Version <span data-app-version>1.0.3</span></span>
     </div>
   </div>
 </footer>
