@@ -1,4 +1,4 @@
-/* Khronos — site vitrine.
+/* Fiabl — site vitrine.
    Trois comportements et pas un de plus : menu mobile, liseré de l'en-tête au
    défilement, apparition des blocs. Tout le reste du site fonctionne sans JS —
    c'est ce qui garantit qu'un robot d'indexation voit exactement le même

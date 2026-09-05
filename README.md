@@ -1,6 +1,6 @@
-# khronos-app.com
+# fiabl.app
 
-Site vitrine de **Khronos**, l'application de bureau de vérification des antécédents
+Site vitrine de **Fiabl**, l'application de bureau de vérification des antécédents
 d'assurance auto et moto.
 
 Site **statique** : aucun build, aucune dépendance, aucun `npm install`. On ouvre un
@@ -51,7 +51,7 @@ Ces points sont marqués `TODO` dans le HTML :
 | `telechargement/index.html` | l'URL réelle de l'installeur (`href="#"` aujourd'hui) |
 | `tarifs.html` | les montants des licences — valeurs d'exemple |
 | `mentions-legales.html` | identité de l'éditeur, du directeur de publication et de l'hébergeur |
-| toutes les pages | l'adresse de contact (`contact@khronos-app.com` par défaut) |
+| toutes les pages | l'adresse de contact (`contact@fiabl.app` par défaut) |
 
 ## Prévisualiser
 
