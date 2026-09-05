@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Tarifs — Licence par poste ou par cabinet | ChronoFrise</title>
-<meta name="description" content="Les tarifs de ChronoFrise : version d'essai gratuite, licence par poste et licence cabinet. Sans engagement, mises à jour incluses, aucune donnée hébergée.">
+<title>Tarifs : 3,99 € par mois, 7 jours d'essai | ChronoFrise</title>
+<meta name="description" content="ChronoFrise coûte 3,99 € TTC par mois, sans engagement, avec 7 jours d'essai gratuit. Paiement sécurisé par Stripe, résiliable à tout moment, mises à jour incluses.">
 <link rel="canonical" href="https://chronofrise.com/tarifs.html">
 
 <meta name="theme-color" content="#0d0f13">
@@ -15,8 +15,8 @@
 <meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="ChronoFrise">
 <meta property="og:url" content="https://chronofrise.com/tarifs.html">
-<meta property="og:title" content="Tarifs — Licence ChronoFrise par poste ou par cabinet">
-<meta property="og:description" content="Version d'essai gratuite, licence par poste et licence cabinet. Sans engagement, mises à jour incluses.">
+<meta property="og:title" content="Tarifs : 3,99 € par mois, 7 jours d'essai">
+<meta property="og:description" content="Un seul prix, tout compris, sans engagement. Paiement par Stripe, résiliable à tout moment.">
 <meta property="og:image" content="https://chronofrise.com/assets/img/chronofrise-ecran.png">
 <meta name="twitter:card" content="summary_large_image">
 
@@ -27,10 +27,38 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://chronofrise.com/" },
-    { "@type": "ListItem", "position": 2, "name": "Tarifs", "item": "https://chronofrise.com/tarifs.html" }
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://chronofrise.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Tarifs", "item": "https://chronofrise.com/tarifs.html" }
+      ]
+    },
+    {
+      "@type": "Product",
+      "name": "ChronoFrise",
+      "description": "Application de bureau de vérification des antécédents d'assurance auto et moto.",
+      "image": "https://chronofrise.com/assets/img/logo-chronofrise-256.png",
+      "brand": { "@type": "Brand", "name": "ChronoFrise" },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://chronofrise.com/tarifs.html",
+        "price": "3.99",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock",
+        "description": "Abonnement mensuel, 7 jours d'essai gratuit, sans engagement.",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "3.99",
+          "priceCurrency": "EUR",
+          "valueAddedTaxIncluded": true,
+          "billingIncrement": 1,
+          "unitCode": "MON",
+          "unitText": "mois"
+        }
+      }
+    }
   ]
 }
 </script>
@@ -71,124 +99,129 @@
   <div class="page-head">
     <div class="wrap">
       <p class="eyebrow" style="color: var(--coral-bright);">Tarifs</p>
-      <h1>Une licence par poste, sans serveur à payer.</h1>
+      <h1>Un seul prix, et il tient sur une ligne.</h1>
       <p>
-        ChronoFrise ne stocke rien chez nous : il n'y a ni hébergement, ni volume, ni utilisateur
-        actif à facturer. Le prix ne dépend que du nombre de postes qui s'en servent.
+        3,99 € TTC par mois, tout compris, sans engagement. Ni palier, ni option, ni volume à
+        surveiller : ChronoFrise ne stocke rien chez nous, il n'y a donc rien à vous facturer
+        à l'usage.
       </p>
     </div>
   </div>
 
-  <!-- ⚠️ TODO — MONTANTS À CONFIRMER
-       Les prix ci-dessous sont des VALEURS D'EXEMPLE mises en place pour la maquette.
-       Remplacer les trois blocs `.plan-price` et les `plan-note` avant toute mise en
-       ligne, ainsi que la ligne « prix » du tableau comparatif plus bas. -->
   <section>
     <div class="wrap">
-      <div class="pricing">
+      <div class="pricing pricing-solo">
+        <article class="plan is-featured">
+          <span class="plan-tag">7 jours d'essai</span>
 
-        <article class="plan reveal">
-          <h3>Essai</h3>
-          <p class="plan-for">Pour se faire une idée sur ses propres dossiers, sans rien engager.</p>
-          <p class="plan-price"><span class="amount">Gratuit</span></p>
-          <p class="plan-note">30 jours, toutes les fonctionnalités.</p>
+          <h3>Abonnement ChronoFrise</h3>
+          <p class="plan-for">
+            Pour l'agent, le courtier ou le gestionnaire qui vérifie ses dossiers lui-même.
+          </p>
+
+          <p class="plan-price">
+            <span class="amount">3,99 €</span><span class="period">TTC / mois</span>
+          </p>
+          <p class="plan-note">Sans engagement. Résiliable à tout moment.</p>
 
           <ul class="checklist">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Frise, calcul du CRM et alertes complètes</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Frise, calcul du CRM et alertes de vigilance</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Modes auto et moto</span></li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Dossiers illimités</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Aucune carte bancaire demandée</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Vos dossiers sont conservés si vous passez en licence</span></li>
-          </ul>
-
-          <a class="btn btn-block" href="telechargement/index.html">Télécharger l'essai</a>
-        </article>
-
-        <article class="plan is-featured reveal">
-          <span class="plan-tag">Le plus courant</span>
-          <h3>Poste</h3>
-          <p class="plan-for">Pour un agent, un courtier ou un gestionnaire qui traite ses dossiers lui-même.</p>
-          <p class="plan-price"><span class="amount">19 €</span><span class="period">/ mois par poste</span></p>
-          <p class="plan-note">HT, sans engagement de durée.</p>
-
-          <ul class="checklist">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Tout ce que contient l'essai, sans limite de durée</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Mises à jour incluses</span></li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Seuils de calcul paramétrables</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Support par courriel</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Les trois outils : écart de dates, Hamon, calculatrice CRM</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Fonctionnement hors ligne</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Export et restauration de vos dossiers</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Mises à jour et support par courriel inclus</span></li>
           </ul>
 
-          <a class="btn btn-primary btn-block" href="telechargement/index.html">Commencer l'essai</a>
+          <!-- TODO : remplacer par le lien de paiement Stripe (Payment Link ou Checkout). -->
+          <a class="btn btn-primary btn-block btn-lg" href="#">Commencer les 7 jours d'essai</a>
+
+          <p class="plan-note center" style="margin-top: 0.9rem;">
+            Paiement par Stripe. Votre carte est demandée à la souscription,
+            le premier prélèvement a lieu le 8<sup>e</sup> jour.
+          </p>
         </article>
-
-        <article class="plan reveal">
-          <h3>Cabinet</h3>
-          <p class="plan-for">Pour une agence ou un service de souscription à plusieurs postes.</p>
-          <p class="plan-price"><span class="amount">Sur devis</span></p>
-          <p class="plan-note">À partir de 5 postes, tarif dégressif.</p>
-
-          <ul class="checklist">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Tout ce que contient la licence Poste</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Déploiement silencieux sur parc informatique</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Réglages de calcul harmonisés entre les postes</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Facturation annuelle sur facture</span></li>
-          </ul>
-
-          <a class="btn btn-block" href="mailto:contact@chronofrise.com?subject=Demande%20de%20devis%20ChronoFrise%20cabinet">Demander un devis</a>
-        </article>
-
       </div>
-
-      <p class="center muted mt-3" style="font-size: 0.9rem;">
-        Prix hors taxes. Le paiement ne conditionne aucun stockage : vos dossiers restent sur vos postes dans tous les cas.
-      </p>
     </div>
   </section>
 
-  <!-- ══ Comparatif ═════════════════════════════════════════════════════ -->
   <section class="band-soft">
     <div class="wrap">
-      <div class="section-head">
-        <h2>Ce que contient chaque licence</h2>
-        <p>Les fonctions de calcul sont identiques partout. Ce qui change, c'est la durée et le nombre de postes.</p>
+      <div class="section-head centered">
+        <p class="eyebrow">L'essai</p>
+        <h2>Comment se passent les sept jours.</h2>
+        <p>
+          Nous préférons l'écrire noir sur blanc plutôt que de vous le laisser découvrir sur
+          un relevé bancaire.
+        </p>
       </div>
 
-      <div class="table-scroll">
-        <table class="compare">
-          <caption class="visually-hidden">Comparaison des licences ChronoFrise : Essai, Poste et Cabinet.</caption>
-          <thead>
-            <tr>
-              <th scope="col">&nbsp;</th>
-              <th scope="col">Essai</th>
-              <th scope="col">Poste</th>
-              <th scope="col">Cabinet</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">Prix</th>
-              <!-- TODO : aligner avec les montants définitifs des cartes ci-dessus. -->
-              <td>Gratuit</td>
-              <td>19 € / mois</td>
-              <td>Sur devis</td>
-            </tr>
-            <tr><th scope="row">Durée</th><td>30 jours</td><td>Illimitée</td><td>Illimitée</td></tr>
-            <tr><th scope="row">Postes</th><td>1</td><td>1</td><td>5 et plus</td></tr>
-            <tr><th scope="row">Frise et calcul du CRM</th><td class="yes">Oui</td><td class="yes">Oui</td><td class="yes">Oui</td></tr>
-            <tr><th scope="row">Alertes de vigilance</th><td class="yes">Oui</td><td class="yes">Oui</td><td class="yes">Oui</td></tr>
-            <tr><th scope="row">Modes auto et moto</th><td class="yes">Oui</td><td class="yes">Oui</td><td class="yes">Oui</td></tr>
-            <tr><th scope="row">Seuils paramétrables</th><td class="yes">Oui</td><td class="yes">Oui</td><td class="yes">Oui</td></tr>
-            <tr><th scope="row">Fonctionnement hors ligne</th><td class="yes">Oui</td><td class="yes">Oui</td><td class="yes">Oui</td></tr>
-            <tr><th scope="row">Export et restauration</th><td class="yes">Oui</td><td class="yes">Oui</td><td class="yes">Oui</td></tr>
-            <tr><th scope="row">Mises à jour</th><td class="yes">Oui</td><td class="yes">Oui</td><td class="yes">Oui</td></tr>
-            <tr><th scope="row">Déploiement sur parc</th><td class="no">—</td><td class="no">—</td><td class="yes">Oui</td></tr>
-            <tr><th scope="row">Facturation sur facture</th><td class="no">—</td><td class="no">—</td><td class="yes">Oui</td></tr>
-          </tbody>
-        </table>
+      <div class="steps">
+        <article class="step reveal">
+          <h3>Vous souscrivez</h3>
+          <p>
+            Le paiement passe par Stripe et votre carte est enregistrée dès la souscription.
+            Rien n'est prélevé pendant les sept premiers jours.
+          </p>
+        </article>
+        <article class="step reveal">
+          <h3>Vous recevez votre clé</h3>
+          <p>
+            Une clé de licence vous parvient par courriel. Vous la collez une fois dans
+            l'application, et c'est terminé : il n'y a ni compte, ni mot de passe.
+          </p>
+        </article>
+        <article class="step reveal">
+          <h3>Vous décidez</h3>
+          <p>
+            Vous arrêtez avant le 8<sup>e</sup> jour, rien n'est prélevé. Sinon l'abonnement
+            court au mois, et se résilie quand vous le voulez.
+          </p>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- ══ FAQ tarifs ═════════════════════════════════════════════════════ -->
+  <section class="band-dark">
+    <div class="wrap">
+      <div class="split">
+        <div>
+          <p class="eyebrow">Sans surprise</p>
+          <h2>Ce que le prix ne cache pas.</h2>
+          <p class="lead mt-2" style="color: rgba(255,255,255,0.72);">
+            Un logiciel qui n'héberge rien n'a pas de coût variable. C'est ce qui permet un
+            prix unique, et c'est ce qui garantit qu'il ne montera pas avec votre activité.
+          </p>
+        </div>
+
+        <ul class="checklist">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+            <span><strong>Aucun coût au dossier ni au volume.</strong> Dix dossiers ou mille, le prix ne bouge pas.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+            <span><strong>Aucun frais d'installation</strong> ni de mise en service.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+            <span><strong>Mises à jour comprises</strong>, corrections comme nouveautés, jamais facturées à part.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+            <span><strong>Aucune durée minimale.</strong> Vous partez quand vous voulez, sans préavis.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+            <span><strong>Aucune donnée hébergée</strong>, donc aucun coût de stockage à vous répercuter un jour.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <section>
     <div class="wrap">
       <div class="section-head centered">
@@ -198,43 +231,96 @@
 
       <div class="faq">
         <details>
-          <summary>Que se passe-t-il à la fin de l'essai ?</summary>
+          <summary>Le prix est-il HT ou TTC ?</summary>
           <div class="faq-body">
             <p>
-              L'application cesse d'ouvrir de nouveaux dossiers, mais vos données restent sur
-              votre poste et vous pouvez les exporter. Activer une licence rend l'accès
-              immédiatement, sur les mêmes dossiers.
+              TTC. Les 3,99 € annoncés sont exactement le montant prélevé chaque mois, taxes
+              comprises. Il n'y a pas de second prix à découvrir au moment de payer.
             </p>
           </div>
         </details>
 
         <details>
-          <summary>Une licence est-elle liée à une personne ou à une machine ?</summary>
+          <summary>Faut-il donner sa carte pour l'essai ?</summary>
           <div class="faq-body">
             <p>
-              À un poste. ChronoFrise n'a pas de compte utilisateur : il n'y a donc rien à
-              transférer quand un collaborateur change de fonction, seulement une machine à
-              désigner.
+              Oui. L'abonnement démarre à la souscription et votre carte est enregistrée par
+              Stripe, mais aucun montant n'est prélevé pendant les sept premiers jours.
+            </p>
+            <p>
+              Si vous arrêtez avant le 8<sup>e</sup> jour, vous ne payez rien du tout.
             </p>
           </div>
         </details>
 
         <details>
-          <summary>Y a-t-il un engagement de durée ?</summary>
+          <summary>Comment résilier ?</summary>
           <div class="faq-body">
             <p>
-              Non pour la licence Poste, résiliable à tout moment. La licence Cabinet est
-              annuelle, ce qui est ce qui permet le tarif dégressif.
+              Depuis le portail client Stripe, dont le lien figure sur chacune de vos factures.
+              La résiliation prend effet à la fin du mois en cours, sans préavis, sans frais et
+              sans avoir à nous écrire.
             </p>
           </div>
         </details>
 
         <details>
-          <summary>Les mises à jour sont-elles facturées à part ?</summary>
+          <summary>Que deviennent mes dossiers si je résilie ?</summary>
           <div class="faq-body">
             <p>
-              Jamais. Toute licence active reçoit les mises à jour, corrections comme
-              nouveautés, sans supplément.
+              Ils restent sur votre poste : ils n'ont jamais été ailleurs. L'application cesse
+              d'ouvrir de nouveaux dossiers, mais la fonction d'export reste accessible pour
+              récupérer l'ensemble de vos données dans un fichier.
+            </p>
+            <p>
+              Si vous vous réabonnez plus tard, vous retrouvez vos dossiers tels quels.
+            </p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Faut-il créer un compte ?</summary>
+          <div class="faq-body">
+            <p>
+              Non. Vous recevez une clé de licence par courriel et vous la collez une fois dans
+              l'application. Il n'y a ni identifiant, ni mot de passe, ni espace client à
+              gérer, et donc rien à révoquer au départ d'un collaborateur.
+            </p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Le paiement est-il sécurisé ?</summary>
+          <div class="faq-body">
+            <p>
+              Le paiement est traité par Stripe, prestataire certifié PCI DSS de niveau 1. Vos
+              coordonnées bancaires sont saisies chez lui et ne transitent jamais par nous :
+              nous ne les voyons pas et ne les conservons pas.
+            </p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Vais-je recevoir une facture ?</summary>
+          <div class="faq-body">
+            <p>
+              Oui, automatiquement par courriel à chaque prélèvement. L'historique complet de
+              vos factures reste téléchargeable depuis le portail client Stripe.
+            </p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Une licence couvre-t-elle plusieurs postes ?</summary>
+          <div class="faq-body">
+            <p>
+              Non, une clé vaut pour un poste. Il n'existe pas encore d'offre multi-postes pour
+              les cabinets et les services de souscription.
+            </p>
+            <p>
+              Si c'est votre cas,
+              <a href="mailto:contact@chronofrise.com?subject=Besoin%20multi-postes%20ChronoFrise">écrivez-nous</a> :
+              c'est le genre de demande qui décide de ce que nous construisons ensuite.
             </p>
           </div>
         </details>
@@ -243,8 +329,8 @@
           <summary>Nos données transitent-elles par vos serveurs si nous payons ?</summary>
           <div class="faq-body">
             <p>
-              Non, et le mode de facturation n'y change rien. ChronoFrise n'a pas de serveur de
-              dossiers, quelle que soit la licence. Le détail est dans notre
+              Non, et l'abonnement n'y change rien. ChronoFrise n'a pas de serveur de dossiers.
+              Le détail figure dans notre
               <a href="confidentialite.html">politique de confidentialité</a>.
             </p>
           </div>
@@ -256,16 +342,17 @@
   <section class="section-tight">
     <div class="wrap">
       <div class="cta-final">
-        <h2>Commencez par l'essai.</h2>
-        <p>Trente jours pour vérifier que ChronoFrise trouve ce que vous cherchiez, sur vos dossiers à vous.</p>
+        <h2>Sept jours pour vous faire un avis.</h2>
+        <p>
+          Passez à ChronoFrise un dossier dont vous connaissez déjà la réponse,
+          et comparez avec ce que vous auriez conclu à la main.
+        </p>
         <div class="btn-row">
-          <a class="btn btn-primary btn-lg" href="telechargement/index.html">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"/></svg>
-            Télécharger pour Windows
-          </a>
-          <a class="btn btn-lg btn-on-dark" href="mailto:contact@chronofrise.com?subject=Demande%20de%20devis%20ChronoFrise">Demander un devis</a>
+          <!-- TODO : lien de paiement Stripe. -->
+          <a class="btn btn-primary btn-lg" href="#">Commencer les 7 jours d'essai</a>
+          <a class="btn btn-lg btn-on-dark" href="telechargement/index.html">Télécharger l'application</a>
         </div>
-        <p class="fine">Windows 10 et 11 · moins de 4 Mo · aucune carte bancaire</p>
+        <p class="fine">3,99 € TTC par mois · sans engagement · résiliable en un clic</p>
       </div>
     </div>
   </section>

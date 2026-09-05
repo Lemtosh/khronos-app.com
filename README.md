@@ -12,7 +12,7 @@ fichier, on l'édite, on le déploie tel quel.
 .
 ├── index.html                 accueil (une page complète)
 ├── fonctionnalites.html       le détail de chaque contrôle
-├── tarifs.html                licences + comparatif + FAQ facturation
+├── tarifs.html                offre unique, essai de 7 jours, FAQ facturation
 ├── telechargement/index.html  page de téléchargement et d'installation
 ├── mentions-legales.html
 ├── confidentialite.html
@@ -31,8 +31,8 @@ fichier, on l'édite, on le déploie tel quel.
   La charte vient du logo (anthracite + corail) ; les jetons `--green` / `--amber` /
   `--red` sont ceux de l'application, pour que le site et le produit disent la même chose.
 - **Aucune ressource externe.** Ni police Google, ni CDN, ni script d'analyse. C'est ce qui
-  permet de n'afficher aucune bannière de cookies et de garder un premier rendu immédiat —
-  la vitesse est un critère de classement.
+  permet de n'afficher aucune bannière de cookies et de garder un premier rendu immédiat.
+  La vitesse est un critère de classement.
 - **Le site doit rester lisible sans JavaScript.** Les animations d'apparition sont
   préfixées par `.js` dans le CSS : sans la classe posée par `main.js`, rien n'est masqué.
   Un robot d'indexation voit exactement le même contenu qu'un visiteur.
@@ -49,7 +49,7 @@ Ces points sont marqués `TODO` dans le HTML :
 | Où | Quoi |
 |---|---|
 | `telechargement/index.html` | l'URL réelle de l'installeur (`href="#"` aujourd'hui) |
-| `tarifs.html` | les montants des licences — valeurs d'exemple |
+| `tarifs.html` | le lien de paiement Stripe (deux boutons en `href="#"`) |
 | `mentions-legales.html` | identité de l'éditeur, du directeur de publication et de l'hébergeur |
 | toutes les pages | l'adresse de contact (`contact@chronofrise.com` par défaut) |
 

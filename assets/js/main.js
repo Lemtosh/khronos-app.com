@@ -1,7 +1,7 @@
-/* ChronoFrise — site vitrine.
+/* ChronoFrise, site vitrine.
    Trois comportements et pas un de plus : menu mobile, liseré de l'en-tête au
-   défilement, apparition des blocs. Tout le reste du site fonctionne sans JS —
-   c'est ce qui garantit qu'un robot d'indexation voit exactement le même
+   défilement, apparition des blocs. Tout le reste du site fonctionne sans JS.
+   C'est ce qui garantit qu'un robot d'indexation voit exactement le même
    contenu qu'un visiteur. */
 (function () {
   'use strict';
@@ -24,7 +24,7 @@
       setOpen(toggle.getAttribute('aria-expanded') !== 'true');
     });
 
-    /* Un clic sur une entrée referme le menu — sinon il reste ouvert par-dessus
+    /* Un clic sur une entrée referme le menu, sinon il reste ouvert par-dessus
        la section vers laquelle on vient de sauter. */
     menu.addEventListener('click', function (e) {
       if (e.target.closest('a')) setOpen(false);

@@ -1,5 +1,5 @@
 /* ══════════════════════════════════════════════════════════════════════════
-   ChronoFrise — site vitrine
+   ChronoFrise, site vitrine
    Source unique des couleurs, de la typographie et des primitives.
    Charte reprise du logo : hexagone anthracite + corail, frise blanche.
    Les jetons sémantiques (vert / ambre / rouge) sont ceux de l'application,
@@ -7,12 +7,12 @@
    ══════════════════════════════════════════════════════════════════════════ */
 
 :root {
-  /* Encre — l'anthracite de l'hexagone du logo */
+  /* Encre : l'anthracite de l'hexagone du logo */
   --ink-900: #0d0f13;
   --ink-800: #14171d;
   --ink-700: #1d222b;
 
-  /* Accent — le corail du logo, du clair au profond */
+  /* Accent : le corail du logo, du clair au profond */
   --coral: #f0392b;
   --coral-bright: #ff5c3e;
   --coral-deep: #d42a1d;
@@ -27,7 +27,7 @@
   --border: rgba(17, 24, 39, 0.12);
   --border-strong: rgba(17, 24, 39, 0.2);
 
-  /* Jetons sémantiques — identiques à ceux de l'application */
+  /* Jetons sémantiques : identiques à ceux de l'application */
   --green: #10b981;
   --amber: #f59e0b;
   --red: #ef4444;
@@ -42,8 +42,8 @@
   --wrap: 1140px;
 
   /* Pile système : aucune requête réseau, aucun cookie, rendu natif partout.
-     Une police externe coûterait un aller-retour au premier rendu — donc du
-     référencement — pour un gain nul sur une interface aussi sobre. */
+     Une police externe coûterait un aller-retour au premier rendu, donc du
+     référencement, pour un gain nul sur une interface aussi sobre. */
   --font: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, "Helvetica Neue", Arial, sans-serif;
 }
 
@@ -151,7 +151,7 @@ section { padding-block: clamp(3.5rem, 8vw, 6.5rem); }
 }
 .btn-primary:hover { box-shadow: 0 10px 28px rgba(240, 57, 43, 0.42); }
 
-/* Sur fond sombre, un bouton neutre garde un fond — jamais la transparence pure,
+/* Sur fond sombre, un bouton neutre garde un fond, jamais la transparence pure,
    qui le ferait disparaître dès qu'un contenu clair passe derrière. */
 .btn-on-dark { background: rgba(255, 255, 255, 0.07); border-color: rgba(255, 255, 255, 0.22); color: #fff; }
 .btn-on-dark:hover { background: rgba(255, 255, 255, 0.13); }
@@ -459,7 +459,7 @@ section { padding-block: clamp(3.5rem, 8vw, 6.5rem); }
   align-items: center;
 }
 
-/* ── Encadré d'alerte — reprend les badges de vigilance ────────────────── */
+/* ── Encadré d'alerte : reprend les badges de vigilance ────────────────── */
 .callout {
   display: flex;
   gap: 0.9rem;
@@ -514,6 +514,12 @@ section { padding-block: clamp(3.5rem, 8vw, 6.5rem); }
 .plan-note { color: var(--muted); font-size: 0.86rem; }
 .plan .checklist { margin: 1.4rem 0; flex: 1; }
 .plan .checklist li { font-size: 0.94rem; }
+
+/* Offre unique : la grille de tarifs n'a qu'une carte, il faut donc la borner
+   et la centrer. Sans cela elle s'étire sur toute la largeur et se lit comme
+   une bannière, plus comme une offre. */
+.pricing-solo { max-width: 430px; margin-inline: auto; }
+.pricing-solo .plan-for { min-height: 0; }
 
 /* ── Tableau comparatif ────────────────────────────────────────────────── */
 .table-scroll { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius); background: var(--card); }
