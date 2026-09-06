@@ -114,6 +114,14 @@
         },
         {
           "@type": "Question",
+          "name": "Pourquoi Windows affiche-t-il un avertissement à l'installation de ChronoFrise ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Parce que l'application est récente et que son éditeur n'est pas encore reconnu par Windows. L'écran « Windows a protégé votre ordinateur » signale une absence de notoriété, pas une détection de virus : l'installation se poursuit en choisissant « Informations complémentaires », puis « Exécuter quand même ». Cette reconnaissance passe par un certificat de signature de code, facturé plusieurs centaines d'euros par an. Dès qu'il sera financé, l'installeur sera signé, le nom de l'éditeur remplacera « Éditeur inconnu » et l'avertissement disparaîtra."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "ChronoFrise gère-t-il l'auto et la moto ?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -576,6 +584,26 @@
               Windows 10 ou Windows 11. ChronoFrise s'appuie sur WebView2, déjà installé sur ces
               versions de Windows. L'installeur pèse moins de 2 Mo, l'application se lance instantanément
               et ne demande aucun droit administrateur particulier.
+            </p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Pourquoi Windows affiche-t-il un avertissement à l'installation ?</summary>
+          <div class="faq-body">
+            <p>
+              Parce que ChronoFrise est une application récente, éditée par une petite structure.
+              Windows affiche un écran bleu « Windows a protégé votre ordinateur » pour tout
+              programme dont l'éditeur n'est pas encore reconnu : ce n'est pas une détection de
+              virus, mais une absence de notoriété. Deux clics suffisent pour continuer
+              (« Informations complémentaires », puis « Exécuter quand même »).
+            </p>
+            <p>
+              Cette reconnaissance s'achète : elle passe par un certificat de signature de code
+              qui coûte plusieurs centaines d'euros par an. Dès que les abonnements le
+              financeront, l'installeur sera signé, notre nom remplacera « Éditeur inconnu » et
+              l'avertissement disparaîtra. <a href="telechargement/index.html#smartscreen">L'écran
+              en question, en images</a>.
             </p>
           </div>
         </details>

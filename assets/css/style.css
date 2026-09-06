@@ -677,3 +677,81 @@ table.compare .no { color: var(--muted); }
   font-weight: 600;
 }
 .skip-link:focus { top: 0; }
+
+/* ── Avertissement SmartScreen ─────────────────────────────────────────────
+   Une note courte sous le bouton de téléchargement, puis la reproduction de
+   la fenêtre Windows. Ce n'est pas une capture d'écran mais une maquette en
+   HTML : elle reste nette à toutes les tailles et se lit au lecteur d'écran.
+   Les couleurs sont celles de Windows, volontairement hors charte. */
+.notice-download {
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+  max-width: 56ch;
+  margin-top: 1rem;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+.notice-download svg { width: 17px; height: 17px; flex: none; margin-top: 0.15rem; color: var(--amber); }
+.notice-download a { color: inherit; text-underline-offset: 3px; }
+.hero .notice-download { color: rgba(255, 255, 255, 0.68); }
+
+.smartscreen-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: clamp(1.6rem, 4vw, 3rem);
+  align-items: start;
+}
+
+.ss-shot { display: grid; gap: 1rem; }
+.ss-shot figcaption { font-size: 0.88rem; color: var(--muted); }
+
+.ss-window {
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  background: #f0f0f0;
+  color: #1a1a1a;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+.ss-titlebar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.35rem 0.6rem;
+  background: #ffffff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  color: #4b4b4b;
+  font-size: 0.8rem;
+}
+.ss-body { padding: 1.15rem 1.3rem 1.3rem; }
+.ss-title { font-size: 1.12rem; font-weight: 600; margin: 0 0 0.45rem; color: #1a1a1a; }
+.ss-text { font-size: 0.9rem; line-height: 1.55; color: #303030; margin: 0; }
+.ss-link {
+  display: inline-block;
+  margin-top: 0.7rem;
+  font-size: 0.9rem;
+  color: #0066cc;
+  text-decoration: underline;
+}
+.ss-details {
+  margin-top: 0.85rem;
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: #303030;
+}
+.ss-details span { color: #5a5a5a; }
+.ss-buttons { display: flex; gap: 0.5rem; justify-content: flex-end; margin-top: 1.15rem; }
+.ss-btn {
+  padding: 0.4rem 1.1rem;
+  border: 1px solid #adadad;
+  border-radius: 3px;
+  background: #e1e1e1;
+  font-size: 0.87rem;
+  color: #1a1a1a;
+}
+.ss-btn.is-target { border-color: #0066cc; box-shadow: 0 0 0 2px rgba(0, 102, 204, 0.25); font-weight: 600; }
+
+.ss-why { display: grid; gap: 1.1rem; }
+.ss-why h3 { font-size: 1.05rem; margin-bottom: 0.35rem; }
+.ss-why p { font-size: 0.97rem; color: var(--muted); }
