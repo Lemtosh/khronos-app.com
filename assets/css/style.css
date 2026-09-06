@@ -606,6 +606,8 @@ table.compare .no { color: var(--muted); }
 .faq details[open] summary::after { transform: rotate(225deg) translate(-2px, -2px); }
 .faq .faq-body { padding: 0 1.3rem 1.25rem; color: var(--muted); }
 .faq .faq-body p + p { margin-top: 0.7rem; }
+.faq .faq-body ol { margin: 0 0 0.9rem; padding-left: 1.25rem; display: grid; gap: 0.45rem; }
+.faq .faq-body a { color: var(--coral-deep); font-weight: 600; }
 
 /* ── Appel à l'action final ────────────────────────────────────────────── */
 .cta-final {
