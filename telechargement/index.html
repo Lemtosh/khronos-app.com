@@ -88,6 +88,16 @@
           </a>
         </div>
 
+        <p class="notice-download">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 16H3L12 3z"/><path d="M12 9v4M12 16.5v.5"/></svg>
+          <span>
+            À l'installation, Windows affichera un écran bleu « Windows a protégé votre
+            ordinateur ». C'est normal, ce n'est pas une alerte antivirus, et l'installation
+            se poursuit en deux clics.
+            <a href="#smartscreen">Voir à quoi ça ressemble et pourquoi</a>.
+          </span>
+        </p>
+
         <ul class="hero-trust">
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
@@ -117,9 +127,9 @@
         <article class="step reveal">
           <h3>Lancez l'installeur</h3>
           <p>
-            Ouvrez le fichier téléchargé. Windows peut afficher un avertissement SmartScreen
-            sur une application récente : choisissez « Informations complémentaires », puis
-            « Exécuter quand même ».
+            Ouvrez le fichier téléchargé. Windows affiche un écran bleu sur une application
+            récente : choisissez « Informations complémentaires », puis « Exécuter quand
+            même ». <a href="#smartscreen">Le détail est expliqué plus bas</a>.
           </p>
         </article>
         <article class="step reveal">
@@ -175,8 +185,9 @@
               <strong>Avertissement SmartScreen</strong>
               <p>
                 Windows signale toute application dont la réputation n'est pas encore établie,
-                indépendamment de son contenu. L'installeur est signé et distribué depuis ce
-                site uniquement : ne le téléchargez pas ailleurs.
+                indépendamment de son contenu. L'installeur est distribué depuis ce site
+                uniquement : ne le téléchargez pas ailleurs.
+                <a href="#smartscreen">Pourquoi cet écran apparaît</a>.
               </p>
             </div>
           </div>
@@ -191,6 +202,118 @@
                 nous construisons ensuite.
               </p>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="smartscreen">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">À l'installation</p>
+        <h2>L'écran bleu de Windows, expliqué.</h2>
+        <p class="lead">
+          Quand vous lancerez l'installeur, Windows affichera la fenêtre ci-dessous.
+          Elle inquiète, à juste titre : voici exactement ce qu'elle dit, ce qu'elle ne
+          dit pas, et quand elle disparaîtra.
+        </p>
+      </div>
+
+      <div class="smartscreen-grid">
+        <figure class="ss-shot">
+          <div class="ss-window" role="img" aria-label="Fenêtre Windows intitulée « Windows a protégé votre ordinateur ». Texte : Microsoft Defender SmartScreen a empêché le démarrage d'une application non reconnue. L'exécution de cette application peut mettre votre ordinateur en danger. Un lien « Informations complémentaires » et un bouton « Ne pas exécuter ».">
+            <div class="ss-titlebar" aria-hidden="true">✕</div>
+            <div class="ss-body" aria-hidden="true">
+              <p class="ss-title">Windows a protégé votre ordinateur</p>
+              <p class="ss-text">
+                Microsoft Defender SmartScreen a empêché le démarrage d'une application non
+                reconnue. L'exécution de cette application peut mettre votre ordinateur en danger.
+              </p>
+              <span class="ss-link is-target">Informations complémentaires</span>
+              <div class="ss-buttons">
+                <span class="ss-btn">Ne pas exécuter</span>
+              </div>
+            </div>
+          </div>
+          <figcaption>
+            <strong>1.</strong> L'écran affiché au lancement de l'installeur. Cliquez sur
+            « Informations complémentaires », le petit lien souligné.
+          </figcaption>
+        </figure>
+
+        <figure class="ss-shot">
+          <div class="ss-window" role="img" aria-label="La même fenêtre après avoir cliqué sur « Informations complémentaires ». Elle indique Application : ChronoFrise_setup.exe, Éditeur : Éditeur inconnu, et ajoute un bouton « Exécuter quand même » à côté de « Ne pas exécuter ».">
+            <div class="ss-titlebar" aria-hidden="true">✕</div>
+            <div class="ss-body" aria-hidden="true">
+              <p class="ss-title">Windows a protégé votre ordinateur</p>
+              <p class="ss-text">
+                Microsoft Defender SmartScreen a empêché le démarrage d'une application non
+                reconnue. L'exécution de cette application peut mettre votre ordinateur en danger.
+              </p>
+              <p class="ss-details">
+                Application&nbsp;: <span>ChronoFrise_<span data-app-version>1.0.3</span>_x64-setup.exe</span><br>
+                Éditeur&nbsp;: <span>Éditeur inconnu</span>
+              </p>
+              <div class="ss-buttons">
+                <span class="ss-btn is-target">Exécuter quand même</span>
+                <span class="ss-btn">Ne pas exécuter</span>
+              </div>
+            </div>
+          </div>
+          <figcaption>
+            <strong>2.</strong> Un bouton « Exécuter quand même » apparaît. L'installation
+            démarre, et cet écran ne reviendra plus pour cette version.
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="split mt-3">
+        <div class="ss-why">
+          <div>
+            <h3>Pourquoi cet écran aujourd'hui</h3>
+            <p>
+              SmartScreen ne juge pas le contenu du fichier : il juge sa <strong>notoriété</strong>.
+              Pour qu'un programme soit « reconnu », il faut un certificat de signature acheté
+              auprès d'une autorité, et un historique de téléchargements suffisant. Ce
+              certificat coûte plusieurs centaines d'euros par an, à renouveler, et il se paie
+              avant le premier client. ChronoFrise est un logiciel récent, développé et financé
+              par une seule personne : ni l'un ni l'autre n'est encore là.
+            </p>
+          </div>
+          <div>
+            <h3>Ce que cet écran ne veut pas dire</h3>
+            <p>
+              Aucun virus n'a été détecté. Le message dit « application non reconnue », pas
+              « application dangereuse » : Windows signale qu'il ne connaît pas encore
+              l'éditeur. Un programme parfaitement sain affiche exactement le même écran le
+              jour de sa sortie, et les logiciels que vous utilisez tous les jours l'ont
+              affiché à leurs débuts.
+            </p>
+          </div>
+        </div>
+
+        <div class="ss-why">
+          <div>
+            <h3>Quand il disparaîtra</h3>
+            <p>
+              Dès que les abonnements couvriront le certificat de signature, l'installeur
+              sera signé au nom de l'éditeur. Le nom vérifié remplacera alors « Éditeur
+              inconnu », et l'écran bleu cessera d'apparaître, immédiatement ou après
+              quelques semaines de téléchargements selon le type de certificat. C'est une
+              question de budget, pas de délai technique : rien ne change dans l'application
+              elle-même.
+            </p>
+          </div>
+          <div>
+            <h3>Comment rester prudent d'ici là</h3>
+            <p>
+              Téléchargez l'installeur depuis cette page uniquement, jamais depuis un
+              annuaire de logiciels ou un lien reçu par courriel. Le fichier fait moins de
+              2 Mo et porte le nom indiqué ci-dessus. Au moindre doute, envoyez-le à un
+              service d'analyse en ligne comme VirusTotal avant de l'ouvrir, ou
+              <a href="mailto:contact@gabpro.app?subject=Question%20sur%20l%27installation%20de%20ChronoFrise">écrivez-nous</a>.
+            </p>
           </div>
         </div>
       </div>
