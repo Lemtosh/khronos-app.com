@@ -307,6 +307,51 @@ section { padding-block: clamp(3.5rem, 8vw, 6.5rem); }
 .hero .lead { color: rgba(255, 255, 255, 0.72); margin-top: 1.3rem; }
 .hero .btn-row { margin-top: 2rem; }
 
+/* Offre de lancement : composant réutilisé dans les héros et la carte tarifaire. */
+.launch-offer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem 0.75rem;
+  margin-top: 1.4rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--coral-border);
+  border-radius: var(--radius);
+  background: var(--coral-bg);
+  color: var(--text);
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+.launch-offer strong { color: var(--coral-deep); }
+.launch-offer-label {
+  font-size: 0.7rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--coral-deep);
+}
+.promo-code {
+  display: inline-block;
+  padding: 0.18rem 0.55rem;
+  border: 1px dashed currentColor;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.7);
+  color: var(--coral-deep);
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+  font-size: 0.86em;
+  font-weight: 750;
+  letter-spacing: 0.03em;
+}
+.hero .launch-offer {
+  max-width: 620px;
+  border-color: rgba(255, 92, 62, 0.45);
+  background: rgba(240, 57, 43, 0.13);
+  color: rgba(255, 255, 255, 0.88);
+}
+.hero .launch-offer strong,
+.hero .launch-offer-label { color: #ff8c75; }
+.hero .promo-code { background: rgba(13, 15, 19, 0.45); color: #fff; }
+
 .hero-badge {
   display: inline-flex;
   align-items: center;
@@ -512,6 +557,7 @@ section { padding-block: clamp(3.5rem, 8vw, 6.5rem); }
 .plan-price .amount { font-size: clamp(2.1rem, 4vw, 2.6rem); font-weight: 750; letter-spacing: -0.03em; }
 .plan-price .period { color: var(--muted); font-size: 0.94rem; }
 .plan-note { color: var(--muted); font-size: 0.86rem; }
+.plan .launch-offer { margin-top: 1rem; }
 .plan .checklist { margin: 1.4rem 0; flex: 1; }
 .plan .checklist li { font-size: 0.94rem; }
 
