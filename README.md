@@ -48,7 +48,7 @@ Ces points sont marqués `TODO` dans le HTML :
 
 | Où | Quoi |
 |---|---|
-| `mentions-legales.html` | identité de l'éditeur, du directeur de publication et de l'hébergeur |
+| `mentions-legales.html` | adresse de domiciliation, puis SIREN/SIRET dès l'immatriculation |
 
 ## Prévisualiser
 
