@@ -48,9 +48,7 @@ Ces points sont marqués `TODO` dans le HTML :
 
 | Où | Quoi |
 |---|---|
-| `tarifs.html` | le lien de paiement Stripe (deux boutons en `href="#"`) |
 | `mentions-legales.html` | identité de l'éditeur, du directeur de publication et de l'hébergeur |
-| toutes les pages | l'adresse de contact (`contact@chronofrise.com`) |
 
 ## Prévisualiser
 
