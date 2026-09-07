@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>ChronoFrise : vérification des antécédents d'assurance auto et moto</title>
-<meta name="description" content="ChronoFrise reconstruit la frise des antécédents d'assurance, recalcule le CRM et signale les incohérences avant la souscription. Application Windows, 100 % hors ligne, aucune donnée transmise.">
+<meta name="description" content="Reconstruisez la frise des antécédents, recalculez le CRM et repérez les incohérences avant la souscription. Windows, 100 % hors ligne.">
 <link rel="canonical" href="https://chronofrise.com/">
 
 <meta name="theme-color" content="#0d0f13">
@@ -20,6 +20,8 @@
 <meta property="og:title" content="ChronoFrise : vérification des antécédents d'assurance auto et moto">
 <meta property="og:description" content="Reconstruisez la frise des antécédents, recalculez le CRM et repérez les incohérences avant la souscription. Application Windows, 100 % hors ligne.">
 <meta property="og:image" content="https://chronofrise.com/assets/img/chronofrise-ecran.png">
+<meta property="og:image:width" content="1494">
+<meta property="og:image:height" content="933">
 <meta property="og:image:alt" content="L'écran de ChronoFrise : saisie des antécédents, tableau des périodes et frise chronologique.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="ChronoFrise : vérification des antécédents d'assurance">
@@ -28,7 +30,7 @@
 
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="assets/img/logo-chronofrise-256.png">
-<link rel="stylesheet" href="assets/css/style.css?v=20260906b">
+<link rel="stylesheet" href="assets/css/style.css?v=20260907a">
 
 <!-- Données structurées : décrit le logiciel à Google (encart produit, prix, plateforme). -->
 <script type="application/ld+json" data-software-schema>
@@ -58,15 +60,27 @@
         "@type": "Offer",
         "price": "3.99",
         "priceCurrency": "EUR",
+        "url": "https://chronofrise.com/tarifs.html",
+        "availability": "https://schema.org/InStock",
         "description": "Abonnement mensuel à 3,99 € TTC, 7 jours d'essai gratuit, sans engagement. Offre de lancement : 50 % de réduction pour les 20 premiers clients avec le code LANCEMENT50."
-      }
+      },
+      "screenshot": "https://chronofrise.com/assets/img/chronofrise-ecran.png",
+      "softwareHelp": "https://chronofrise.com/guides/"
     },
     {
       "@type": "Organization",
       "@id": "https://chronofrise.com/#organisation",
       "name": "ChronoFrise",
       "url": "https://chronofrise.com/",
-      "logo": "https://chronofrise.com/assets/img/logo-chronofrise-256.png"
+      "logo": "https://chronofrise.com/assets/img/logo-chronofrise-256.png",
+      "description": "Éditeur de ChronoFrise, application de bureau de vérification des antécédents d'assurance auto et moto.",
+      "email": "contact@chronofrise.com",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "service client",
+        "email": "contact@chronofrise.com",
+        "availableLanguage": "fr"
+      }
     },
     {
       "@type": "WebSite",
@@ -165,6 +179,7 @@
       <ul class="nav-links" id="nav-menu" hidden>
         <li><a href="fonctionnalites.html">Fonctionnalités</a></li>
         <li><a href="tarifs.html">Tarifs</a></li>
+        <li><a href="guides/index.html">Guides</a></li>
         <li><a href="index.html#securite">Sécurité</a></li>
         <li><a href="index.html#faq">Questions</a></li>
         <li class="nav-mobile-cta"><a href="telechargement/index.html">Télécharger</a></li>
@@ -665,6 +680,52 @@
     </div>
   </section>
 
+  <!-- ══ Guides ════════════════════════════════════════════════════════ -->
+  <section class="band-soft">
+    <div class="wrap">
+      <div class="section-head centered">
+        <p class="eyebrow">Guides</p>
+        <h2>Les règles que ChronoFrise applique.</h2>
+        <p>
+          Le calcul du CRM, le contenu d'un relevé d'information et l'effet d'une interruption
+          de garantie sont des règles publiques. Nous les avons écrites, chiffrées et
+          illustrées, pour que vous puissiez refaire le calcul à la main quand il le faut.
+        </p>
+      </div>
+
+      <div class="grid grid-3">
+        <article class="card card-hover">
+          <h3><a href="guides/calcul-crm-bonus-malus.html">Calcul du CRM (bonus-malus)</a></h3>
+          <p>
+            La période de référence décalée de deux mois, la réduction de 5 % par année sans
+            sinistre, la majoration de 25 %, le plancher de 0,50 et le plafond de 3,50. Avec la
+            table des treize années.
+          </p>
+        </article>
+
+        <article class="card card-hover">
+          <h3><a href="guides/releve-information-assurance.html">Lire un relevé d'information</a></h3>
+          <p>
+            Les mentions obligatoires, l'ordre dans lequel les vérifier, et les six endroits où
+            un relevé dit autre chose que ce qu'on croit y lire.
+          </p>
+        </article>
+
+        <article class="card card-hover">
+          <h3><a href="guides/interruption-assurance-perte-bonus.html">Interruption et perte du bonus</a></h3>
+          <p>
+            Ce qui compte comme trou de garantie, à partir de quelle durée l'antériorité ne
+            suit plus, et comment mesurer la coupure sans se tromper d'un jour.
+          </p>
+        </article>
+      </div>
+
+      <p class="center mt-3">
+        <a class="btn" href="guides/index.html">Voir tous les guides</a>
+      </p>
+    </div>
+  </section>
+
   <!-- ══ Appel à l'action final ═════════════════════════════════════════ -->
   <section class="section-tight">
     <div class="wrap">
@@ -709,6 +770,15 @@
           <li><a href="tarifs.html">Tarifs</a></li>
           <li><a href="telechargement/index.html">Télécharger</a></li>
           <li><a href="index.html#faq">Questions fréquentes</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Guides</h4>
+        <ul>
+          <li><a href="guides/calcul-crm-bonus-malus.html">Calcul du CRM</a></li>
+          <li><a href="guides/releve-information-assurance.html">Relevé d'information</a></li>
+          <li><a href="guides/interruption-assurance-perte-bonus.html">Interruption de garantie</a></li>
         </ul>
       </div>
 
