@@ -43,6 +43,11 @@ fichier, on l'édite, on le déploie tel quel.
   Un robot d'indexation voit exactement le même contenu qu'un visiteur.
 - **L'en-tête et le pied de page sont dupliqués dans chaque page.** C'est le prix d'un site
   sans build. Une modification de navigation se répercute dans les 10 fichiers HTML.
+- **Les URL publiques n'ont pas de `.html`.** Cloudflare Pages sert `/tarifs` et redirige
+  `/tarifs.html` en 308. Les URL absolues — `canonical`, `og:url`, `sitemap.xml`, JSON-LD —
+  s'écrivent donc **sans extension**, sans quoi Search Console les classe « Page avec
+  redirection » et ne les indexe pas. Les liens internes relatifs gardent le `.html` :
+  c'est ce qui permet la prévisualisation locale, et Cloudflare les redirige.
 - **Toute nouvelle page s'ajoute à `sitemap.xml`** et porte ses propres `<title>`,
   `description`, `canonical` et balises Open Graph. Deux pages ne partagent jamais le même
   titre.
