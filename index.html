@@ -56,9 +56,34 @@
       ],
       "offers": {
         "@type": "Offer",
+        "url": "https://chronofrise.com/tarifs.html",
         "price": "3.99",
         "priceCurrency": "EUR",
-        "description": "Abonnement mensuel à 3,99 € TTC, 7 jours d'essai gratuit, sans engagement. Offre de lancement : 50 % de réduction pour les 20 premiers clients avec le code LANCEMENT50."
+        "availability": "https://schema.org/InStock",
+        "description": "Abonnement mensuel à 3,99 € TTC, 7 jours d'essai gratuit, sans engagement. Offre de lancement : 50 % de réduction pour les 20 premiers clients avec le code LANCEMENT50.",
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "EUR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "FR"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "DAY" },
+            "transitTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "DAY" }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "FR",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted",
+          "merchantReturnLink": "https://chronofrise.com/tarifs.html"
+        }
       }
     },
     {
