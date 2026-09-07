@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Calcul du CRM (bonus-malus) : règles et table | ChronoFrise</title>
+<meta name="description" content="Période de référence, réduction de 5 % par année sans sinistre, majoration de 25 %, plancher 0,50, plafond 3,50, descente rapide. Table des 13 années.">
+<link rel="canonical" href="https://chronofrise.com/guides/calcul-crm-bonus-malus.html">
+
+<meta name="theme-color" content="#0d0f13">
+<meta name="robots" content="index, follow, max-image-preview:large">
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="ChronoFrise">
+<meta property="og:url" content="https://chronofrise.com/guides/calcul-crm-bonus-malus.html">
+<meta property="og:title" content="Calcul du CRM (bonus-malus) : règles, table et exemples">
+<meta property="og:description" content="Période de référence, réduction de 5 %, majoration de 25 %, plancher 0,50, plafond 3,50, descente rapide et bonus à vie. Avec la table des 13 années.">
+<meta property="og:image" content="https://chronofrise.com/assets/img/chronofrise-ecran.png">
+<meta property="og:image:width" content="1494">
+<meta property="og:image:height" content="933">
+<meta property="og:image:alt" content="L'écran de ChronoFrise : saisie des antécédents, tableau des périodes et frise chronologique.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Calcul du CRM (bonus-malus) : règles, table et exemples">
+<meta name="twitter:description" content="Période de référence, réduction de 5 %, majoration de 25 %, plancher 0,50, plafond 3,50. Avec la table des 13 années.">
+<meta name="twitter:image" content="https://chronofrise.com/assets/img/chronofrise-ecran.png">
+
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="../assets/img/logo-chronofrise-256.png">
+<link rel="stylesheet" href="../assets/css/style.css?v=20260907a">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://chronofrise.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://chronofrise.com/guides/" },
+        { "@type": "ListItem", "position": 3, "name": "Calcul du CRM", "item": "https://chronofrise.com/guides/calcul-crm-bonus-malus.html" }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://chronofrise.com/guides/calcul-crm-bonus-malus.html#article",
+      "headline": "Calcul du CRM (bonus-malus) : règles, table et exemples",
+      "description": "Comment se calcule le coefficient de réduction-majoration : période de référence, réduction de 5 % par année sans sinistre, majoration de 25 % par sinistre responsable, plancher 0,50 et plafond 3,50.",
+      "inLanguage": "fr-FR",
+      "datePublished": "2026-09-07",
+      "dateModified": "2026-09-07",
+      "author": { "@id": "https://chronofrise.com/#organisation" },
+      "publisher": { "@id": "https://chronofrise.com/#organisation" },
+      "isPartOf": { "@id": "https://chronofrise.com/#site" },
+      "mainEntityOfPage": "https://chronofrise.com/guides/calcul-crm-bonus-malus.html",
+      "about": [
+        { "@type": "Thing", "name": "Coefficient de réduction-majoration" },
+        { "@type": "Thing", "name": "Bonus-malus" },
+        { "@type": "Thing", "name": "Assurance automobile" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://chronofrise.com/guides/calcul-crm-bonus-malus.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Comment calcule-t-on le CRM après une année sans sinistre ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "On multiplie le coefficient en cours par 0,95, puis on arrondit à deux décimales par défaut. Un CRM de 1,00 devient 0,95 ; un CRM de 0,76 devient 0,72 (0,722 tronqué). La réduction s'arrête au plancher de 0,50, atteint après treize années consécutives sans sinistre responsable."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "De combien un sinistre responsable augmente-t-il le CRM ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "De 25 % : le coefficient est multiplié par 1,25 pour un sinistre dont la responsabilité est entière. Si la responsabilité est partagée, la majoration est de moitié, soit une multiplication par 1,125. Plusieurs sinistres sur la même période de référence se cumulent en multipliant les coefficients entre eux, sans jamais dépasser le plafond de 3,50."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quelle est la période de référence du bonus-malus ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Douze mois consécutifs qui s'achèvent deux mois avant l'échéance annuelle du contrat. C'est la raison pour laquelle un sinistre survenu dans les deux mois précédant l'échéance n'apparaît pas encore dans le CRM affiché sur le relevé d'information : il sera pris en compte à l'échéance suivante."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qu'est-ce que la descente rapide du malus ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Après deux années consécutives sans aucun sinistre responsable, le coefficient revient directement à 1,00, quel que soit le niveau de malus atteint. Un assuré à 2,44 qui ne déclare rien pendant deux ans repasse donc à 1,00, et non à 2,20."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qu'est-ce que le bonus à vie ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un assuré qui bénéficie du coefficient minimal de 0,50 depuis au moins trois années consécutives conserve ce coefficient lors de son premier sinistre responsable : la majoration ne s'applique pas. Elle redevient applicable dès le sinistre suivant. Cette clause de sauvegarde reste attachée à l'assuré et non au véhicule."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quels sinistres n'augmentent pas le CRM ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Les sinistres sans responsabilité de l'assuré, ainsi que le vol, l'incendie, le bris de glace, les catastrophes naturelles et technologiques. Un accident en stationnement dont l'auteur est resté inconnu n'entraîne pas non plus de majoration. Ces sinistres figurent malgré tout sur le relevé d'information et pèsent souvent dans l'acceptation du risque."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="../index.html">
+      <img src="../assets/img/logo-chronofrise-256.png" alt="" width="34" height="34">
+      <span>ChronoFrise</span>
+    </a>
+
+    <nav aria-label="Navigation principale">
+      <ul class="nav-links" id="nav-menu" hidden>
+        <li><a href="../fonctionnalites.html">Fonctionnalités</a></li>
+        <li><a href="../tarifs.html">Tarifs</a></li>
+        <li><a href="index.html" aria-current="page">Guides</a></li>
+        <li><a href="../index.html#securite">Sécurité</a></li>
+        <li><a href="../index.html#faq">Questions</a></li>
+        <li class="nav-mobile-cta"><a href="../telechargement/index.html">Télécharger</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="../telechargement/index.html">Télécharger</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Ouvrir le menu">
+        <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="contenu">
+
+  <div class="page-head">
+    <div class="wrap">
+      <p class="eyebrow" style="color: var(--coral-bright);">Guide · CRM</p>
+      <h1>Calcul du CRM : les règles, la table, les pièges.</h1>
+      <p>
+        Le coefficient de réduction-majoration n'est pas une estimation commerciale : c'est un
+        calcul encadré par le Code des assurances, identique chez tous les assureurs. Voici
+        comment le refaire à la main, et où il se trompe le plus souvent.
+      </p>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="prose">
+
+        <p class="lead">
+          Un CRM déclaré par un client ne se vérifie pas d'un coup d'œil : il est le résultat
+          d'une chaîne de multiplications sur plusieurs années, dont chaque maillon dépend de
+          dates précises. Ce guide reprend la chaîne dans l'ordre.
+        </p>
+
+        <h2 id="definition">Ce que le CRM mesure</h2>
+        <p>
+          Le coefficient de réduction-majoration — le « bonus-malus » — est un multiplicateur
+          appliqué à la prime de référence du contrat. La prime de référence est celle qui
+          correspondrait au véhicule, à la zone et au profil retenus par l'assureur ; le CRM la
+          module en fonction du passé de l'assuré.
+        </p>
+        <p>
+          <strong>Prime payée = prime de référence × CRM.</strong> Un coefficient de 0,68
+          signifie une prime de référence réduite de 32 % ; un coefficient de 1,25, une prime
+          majorée d'un quart. Le coefficient de départ, pour un conducteur qui n'a jamais été
+          assuré, est de <strong>1,00</strong>.
+        </p>
+        <p>
+          Le mécanisme s'applique aux véhicules terrestres à moteur à usage privé ou
+          professionnel courant. Certaines catégories en sont exclues — deux-roues de faible
+          cylindrée selon les contrats, véhicules de collection, engins agricoles, flottes —
+          auquel cas le relevé d'information ne porte pas de coefficient et l'antériorité
+          s'apprécie autrement.
+        </p>
+
+        <h2 id="periode">La période de référence : douze mois, décalés de deux</h2>
+        <p>
+          C'est le point que l'on oublie le plus souvent. Le coefficient applicable à une
+          échéance annuelle est calculé sur une <strong>période de référence de douze mois
+          consécutifs qui s'achève deux mois avant cette échéance</strong>.
+        </p>
+        <p>
+          Autrement dit, pour un contrat dont l'échéance tombe au 1<sup>er</sup> avril, la
+          période prise en compte court du 1<sup>er</sup> février de l'année précédente au
+          31 janvier de l'année en cours. Les deux derniers mois avant l'échéance ne sont pas
+          « perdus » : ils basculent dans la période suivante.
+        </p>
+
+        <div class="callout is-amber">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4M12 17h.01M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg>
+          <div>
+            <strong>La conséquence pratique</strong>
+            <p>
+              Un sinistre survenu dans les deux mois qui précèdent l'échéance
+              <em>n'est pas encore</em> reflété par le coefficient inscrit sur le relevé
+              d'information. Le client peut présenter en toute bonne foi un CRM de 0,64 alors
+              qu'un sinistre responsable de la veille le portera à 0,80 à l'échéance suivante.
+              C'est l'un des contrôles que
+              <a href="../fonctionnalites.html#alertes">ChronoFrise signale automatiquement</a>.
+            </p>
+          </div>
+        </div>
+
+        <h2 id="reduction">La réduction : 5 % par année sans sinistre</h2>
+        <p>
+          Chaque période de référence de douze mois <strong>sans sinistre responsable</strong>
+          fait baisser le coefficient de 5 % :
+        </p>
+        <p><strong>CRM<sub>nouveau</sub> = CRM<sub>en cours</sub> × 0,95</strong>, arrondi à deux décimales par défaut.</p>
+        <p>
+          L'arrondi se fait <em>par défaut</em>, c'est-à-dire vers le bas, et non au plus
+          proche. C'est ce qui explique les paliers qui semblent irréguliers : 0,76 × 0,95 vaut
+          0,722, ce qui donne 0,72 et non 0,73.
+        </p>
+        <p>
+          La descente s'arrête à <strong>0,50</strong>, le coefficient minimal. Il faut
+          <strong>treize années consécutives</strong> sans sinistre responsable pour l'atteindre
+          depuis 1,00.
+        </p>
+
+        <h3>La table complète, année par année</h3>
+        <div class="table-scroll">
+          <table class="compare">
+            <caption class="visually-hidden">Évolution du coefficient de réduction-majoration sur treize années sans sinistre responsable</caption>
+            <thead>
+              <tr>
+                <th scope="col">Années sans sinistre</th>
+                <th scope="col">Calcul</th>
+                <th scope="col">CRM</th>
+                <th scope="col">Réduction</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Départ</th><td>—</td><td><strong>1,00</strong></td><td>0 %</td></tr>
+              <tr><th scope="row">1 an</th><td>1,00 × 0,95</td><td><strong>0,95</strong></td><td>5 %</td></tr>
+              <tr><th scope="row">2 ans</th><td>0,95 × 0,95 = 0,9025</td><td><strong>0,90</strong></td><td>10 %</td></tr>
+              <tr><th scope="row">3 ans</th><td>0,90 × 0,95 = 0,855</td><td><strong>0,85</strong></td><td>15 %</td></tr>
+              <tr><th scope="row">4 ans</th><td>0,85 × 0,95 = 0,8075</td><td><strong>0,80</strong></td><td>20 %</td></tr>
+              <tr><th scope="row">5 ans</th><td>0,80 × 0,95 = 0,76</td><td><strong>0,76</strong></td><td>24 %</td></tr>
+              <tr><th scope="row">6 ans</th><td>0,76 × 0,95 = 0,722</td><td><strong>0,72</strong></td><td>28 %</td></tr>
+              <tr><th scope="row">7 ans</th><td>0,72 × 0,95 = 0,684</td><td><strong>0,68</strong></td><td>32 %</td></tr>
+              <tr><th scope="row">8 ans</th><td>0,68 × 0,95 = 0,646</td><td><strong>0,64</strong></td><td>36 %</td></tr>
+              <tr><th scope="row">9 ans</th><td>0,64 × 0,95 = 0,608</td><td><strong>0,60</strong></td><td>40 %</td></tr>
+              <tr><th scope="row">10 ans</th><td>0,60 × 0,95 = 0,57</td><td><strong>0,57</strong></td><td>43 %</td></tr>
+              <tr><th scope="row">11 ans</th><td>0,57 × 0,95 = 0,5415</td><td><strong>0,54</strong></td><td>46 %</td></tr>
+              <tr><th scope="row">12 ans</th><td>0,54 × 0,95 = 0,513</td><td><strong>0,51</strong></td><td>49 %</td></tr>
+              <tr><th scope="row">13 ans et plus</th><td>plancher</td><td><strong>0,50</strong></td><td>50 %</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="muted" style="font-size: 0.9rem;">
+          Cette table est celle d'un contrat sans interruption ni sinistre responsable. Toute
+          rupture dans la chronologie la décale : c'est précisément ce qu'une frise met en
+          évidence.
+        </p>
+
+        <h2 id="majoration">La majoration : 25 % par sinistre responsable</h2>
+        <p>
+          Chaque sinistre engageant <strong>entièrement</strong> la responsabilité de l'assuré
+          sur la période de référence multiplie le coefficient par <strong>1,25</strong>.
+        </p>
+        <p>
+          Lorsque la responsabilité est <strong>partagée</strong>, la majoration est réduite de
+          moitié : le coefficient est multiplié par <strong>1,125</strong>.
+        </p>
+        <p>
+          Deux sinistres responsables sur la même période se cumulent en multipliant les
+          coefficients entre eux : 1,00 × 1,25 × 1,25 = 1,5625, arrondi à
+          <strong>1,56</strong>. Le coefficient ne peut jamais dépasser le plafond de
+          <strong>3,50</strong>.
+        </p>
+
+        <h3>Un exemple complet sur cinq ans</h3>
+        <dl>
+          <dt>Année 1 — aucun sinistre</dt>
+          <dd>1,00 × 0,95 = <strong>0,95</strong></dd>
+          <dt>Année 2 — aucun sinistre</dt>
+          <dd>0,95 × 0,95 = 0,9025 → <strong>0,90</strong></dd>
+          <dt>Année 3 — un sinistre responsable</dt>
+          <dd>0,90 × 1,25 = 1,125 → <strong>1,12</strong></dd>
+          <dt>Année 4 — un sinistre à responsabilité partagée</dt>
+          <dd>1,12 × 1,125 = 1,26 → <strong>1,26</strong></dd>
+          <dt>Année 5 — aucun sinistre</dt>
+          <dd>1,26 × 0,95 = 1,197 → <strong>1,19</strong></dd>
+        </dl>
+        <p>
+          Un client qui annonce « je suis à 0,90, j'ai juste eu un petit accrochage » décrit en
+          réalité un coefficient de 1,12. L'écart n'est pas de la mauvaise foi : c'est
+          l'ordre des opérations qui n'est pas intuitif.
+        </p>
+
+        <h2 id="descente-rapide">La descente rapide : retour à 1,00 après deux ans</h2>
+        <p>
+          Le malus ne se rembourse pas année par année. Après
+          <strong>deux années consécutives sans aucun sinistre responsable</strong>, le
+          coefficient revient directement à <strong>1,00</strong>, quel que soit le niveau
+          atteint.
+        </p>
+        <p>
+          Un assuré à 2,44 qui ne déclare rien pendant deux périodes de référence repasse donc
+          à 1,00 — et non à 2,20 par application de deux réductions de 5 %. C'est une remise à
+          plat, pas une décrue.
+        </p>
+
+        <h2 id="bonus-a-vie">Le bonus à vie : la clause de sauvegarde</h2>
+        <p>
+          L'assuré qui bénéficie du coefficient minimal de <strong>0,50 depuis au moins trois
+          années consécutives</strong> conserve ce coefficient lors de son
+          <strong>premier</strong> sinistre responsable : la majoration de 25 % ne s'applique
+          pas.
+        </p>
+        <p>
+          La protection est à usage unique. Le sinistre responsable suivant majore normalement
+          le coefficient, à partir de 0,50. Cette clause est attachée à l'assuré, pas au
+          véhicule : elle le suit lorsqu'il change de voiture ou d'assureur.
+        </p>
+
+        <h2 id="sans-effet">Les sinistres qui n'augmentent pas le coefficient</h2>
+        <p>
+          Tous les sinistres inscrits sur un relevé d'information ne pèsent pas sur le CRM. Ne
+          majorent pas le coefficient :
+        </p>
+        <ul>
+          <li>les sinistres dans lesquels la responsabilité de l'assuré n'est pas engagée ;</li>
+          <li>le vol et l'incendie du véhicule ;</li>
+          <li>le bris de glace ;</li>
+          <li>les catastrophes naturelles et technologiques ;</li>
+          <li>les dommages subis en stationnement lorsque l'auteur est resté inconnu.</li>
+        </ul>
+        <p>
+          Ils restent pourtant mentionnés sur le relevé, et un assureur les regarde : une
+          sinistralité élevée sans responsabilité reste une sinistralité. La distinction est
+          donc à faire dans les deux sens — ne pas majorer un coefficient à tort, ne pas
+          ignorer un historique chargé.
+        </p>
+
+        <h2 id="perte">Quand le coefficient se perd</h2>
+        <p>
+          Le CRM suit l'assuré tant que la couverture est continue. Passé une interruption
+          prolongée — en pratique <strong>deux ans sans assurance</strong> —, l'antériorité
+          n'est plus reprise et le coefficient repart à 1,00. Un client au bonus 0,50 depuis
+          dix ans peut ainsi revenir sur le marché à 1,00 après vingt-cinq mois sans véhicule.
+        </p>
+        <p>
+          Le détail des durées, des cas qui n'en sont pas et de la façon de mesurer le trou est
+          dans le guide
+          <a href="interruption-assurance-perte-bonus.html">Interruption de garantie : quand le
+          bonus est perdu</a>.
+        </p>
+
+        <h2 id="erreurs">Les quatre erreurs qu'on rencontre le plus</h2>
+        <ol>
+          <li>
+            <strong>Arrondir au plus proche.</strong> L'arrondi se fait par défaut. La
+            différence d'un centième se propage ensuite sur toutes les années suivantes.
+          </li>
+          <li>
+            <strong>Oublier le décalage de deux mois.</strong> Un sinistre récent n'est pas
+            encore dans le coefficient affiché. Le relevé est exact ; il est simplement en
+            avance sur le calcul.
+          </li>
+          <li>
+            <strong>Appliquer la réduction et la majoration dans le désordre.</strong> Sur une
+            même période de référence, un sinistre responsable exclut la réduction : on ne
+            multiplie pas par 0,95 puis par 1,25.
+          </li>
+          <li>
+            <strong>Compter une année de couverture incomplète.</strong> Une période de
+            référence n'est validée que si le contrat a couvert douze mois. Onze mois et vingt
+            jours ne donnent pas droit à la réduction.
+          </li>
+        </ol>
+
+        <div class="callout is-green">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+          <div>
+            <strong>Le calcul, refait pour vous</strong>
+            <p>
+              ChronoFrise reprend ces règles sur les périodes que vous saisissez, recalcule le
+              coefficient attendu et le compare à celui déclaré. Quand les deux divergent, il
+              dit de combien et pourquoi.
+              <a href="../fonctionnalites.html#crm">Voir le détail du contrôle CRM</a>.
+            </p>
+          </div>
+        </div>
+
+        <p class="updated muted">Dernière mise à jour : 7 septembre 2026.</p>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="band-soft">
+    <div class="wrap">
+      <div class="section-head centered">
+        <p class="eyebrow">Questions fréquentes</p>
+        <h2>Le CRM en six questions</h2>
+      </div>
+
+      <div class="faq">
+        <details>
+          <summary>Comment calcule-t-on le CRM après une année sans sinistre ?</summary>
+          <div class="faq-body">
+            <p>
+              On multiplie le coefficient en cours par 0,95, puis on arrondit à deux décimales
+              par défaut. Un CRM de 1,00 devient 0,95 ; un CRM de 0,76 devient 0,72, puisque
+              0,722 est tronqué et non arrondi au plus proche. La descente s'arrête au plancher
+              de 0,50, atteint après treize années consécutives sans sinistre responsable.
+            </p>
+          </div>
+        </details>
+
+        <details>
+          <summary>De combien un sinistre responsable augmente-t-il le CRM ?</summary>
+          <div class="faq-body">
+            <p>
+              De 25 % : le coefficient est multiplié par 1,25 lorsque la responsabilité est
+              entière, par 1,125 lorsqu'elle est partagée. Deux sinistres sur la même période
+              de référence se cumulent en multipliant les coefficients entre eux. Le plafond
+              est de 3,50.
+            </p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Quelle est la période de référence du bonus-malus ?</summary>
+          <div class="faq-body">
+            <p>
+              Douze mois consécutifs qui s'achèvent deux mois avant l'échéance annuelle du
+              contrat. C'est pour cette raison qu'un sinistre survenu juste avant l'échéance
+              n'apparaît pas encore dans le coefficient inscrit sur le relevé d'information :
+              il sera pris en compte à l'échéance suivante.
+            </p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Qu'est-ce que la descente rapide du malus ?</summary>
+          <div class="faq-body">
+            <p>
+              Après deux années consécutives sans sinistre responsable, le coefficient revient
+              directement à 1,00, quel que soit le malus atteint. Un assuré à 2,44 repasse donc
+              à 1,00 après deux ans, et non à 2,20.
+            </p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Qu'est-ce que le bonus à vie ?</summary>
+          <div class="faq-body">
+            <p>
+              Un assuré au coefficient minimal de 0,50 depuis au moins trois années
+              consécutives conserve ce coefficient lors de son premier sinistre responsable :
+              la majoration ne s'applique pas. Elle redevient applicable au sinistre suivant.
+              La clause suit l'assuré, pas le véhicule.
+            </p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Quels sinistres n'augmentent pas le CRM ?</summary>
+          <div class="faq-body">
+            <p>
+              Ceux dans lesquels la responsabilité n'est pas engagée, ainsi que le vol,
+              l'incendie, le bris de glace, les catastrophes naturelles et technologiques, et
+              les dommages en stationnement dont l'auteur est resté inconnu. Ils figurent
+              malgré tout sur le relevé d'information et comptent dans l'appréciation du
+              risque.
+            </p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-final">
+    <div class="wrap center">
+      <h2>Vérifiez un CRM en trois minutes.</h2>
+      <p>
+        Saisissez les périodes et les sinistres : ChronoFrise recalcule le coefficient attendu
+        et signale l'écart avec celui déclaré. Sept jours d'essai, sans carte bancaire.
+      </p>
+      <div class="btn-row">
+        <a class="btn btn-primary btn-lg" href="../telechargement/index.html">Télécharger pour Windows</a>
+        <a class="btn btn-lg btn-on-dark" href="index.html">Les autres guides</a>
+      </div>
+      <p class="fine">Windows 10 et 11 · moins de 2 Mo · 100 % hors ligne</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="../index.html">
+          <img src="../assets/img/logo-chronofrise-256.png" alt="" width="34" height="34">
+          <span>ChronoFrise</span>
+        </a>
+        <p>
+          La vérification des antécédents d'assurance auto et moto,
+          sur votre poste et hors ligne.
+        </p>
+      </div>
+      <div>
+        <h4>Produit</h4>
+        <ul>
+          <li><a href="../fonctionnalites.html">Fonctionnalités</a></li>
+          <li><a href="../tarifs.html">Tarifs</a></li>
+          <li><a href="../telechargement/index.html">Télécharger</a></li>
+          <li><a href="../index.html#faq">Questions fréquentes</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Guides</h4>
+        <ul>
+          <li><a href="calcul-crm-bonus-malus.html">Calcul du CRM</a></li>
+          <li><a href="releve-information-assurance.html">Relevé d'information</a></li>
+          <li><a href="interruption-assurance-perte-bonus.html">Interruption de garantie</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Légal</h4>
+        <ul>
+          <li><a href="../mentions-legales.html">Mentions légales</a></li>
+          <li><a href="../confidentialite.html">Confidentialité</a></li>
+          <li><a href="mailto:contact@chronofrise.com">contact@chronofrise.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 ChronoFrise. Tous droits réservés.</span>
+      <span>Windows 10 et 11 · Version <span data-app-version>1.0.3</span></span>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>

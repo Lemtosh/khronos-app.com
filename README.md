@@ -14,6 +14,11 @@ fichier, on l'édite, on le déploie tel quel.
 ├── fonctionnalites.html       le détail de chaque contrôle
 ├── tarifs.html                offre unique, essai de 7 jours, FAQ facturation
 ├── telechargement/index.html  page de téléchargement et d'installation
+├── guides/
+│   ├── index.html             hub éditorial
+│   ├── calcul-crm-bonus-malus.html
+│   ├── releve-information-assurance.html
+│   └── interruption-assurance-perte-bonus.html
 ├── mentions-legales.html
 ├── confidentialite.html
 ├── 404.html
@@ -37,10 +42,16 @@ fichier, on l'édite, on le déploie tel quel.
   préfixées par `.js` dans le CSS : sans la classe posée par `main.js`, rien n'est masqué.
   Un robot d'indexation voit exactement le même contenu qu'un visiteur.
 - **L'en-tête et le pied de page sont dupliqués dans chaque page.** C'est le prix d'un site
-  sans build. Une modification de navigation se répercute dans les 6 fichiers HTML.
+  sans build. Une modification de navigation se répercute dans les 10 fichiers HTML.
 - **Toute nouvelle page s'ajoute à `sitemap.xml`** et porte ses propres `<title>`,
   `description`, `canonical` et balises Open Graph. Deux pages ne partagent jamais le même
   titre.
+- **Le dossier `guides/` porte le contenu éditorial.** Chaque guide vise une intention de
+  recherche informationnelle, porte un `Article` + un `FAQPage` en JSON-LD, et renvoie vers
+  les pages produit. Les questions de la `FAQPage` doivent reprendre mot pour mot celles du
+  `<details>` correspondant : Google recoupe les deux.
+- **Le CSS est versionné par `?v=AAAAMMJJx`.** Toute modification de
+  `assets/css/style.css` s'accompagne d'un bump de ce paramètre dans les 10 pages.
 
 ## À compléter avant la mise en ligne
 
