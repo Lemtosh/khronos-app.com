@@ -1,6 +1,6 @@
 /* ChronoFrise, site vitrine.
-   Quatre comportements : version courante, menu mobile, liseré de l'en-tête
-   au défilement et apparition des blocs. Le téléchargement garde une URL de
+   Six comportements : version courante, menu mobile, liseré de l'en-tête,
+   démonstration, demande en ligne et apparition des blocs. Le téléchargement garde une URL de
    secours dans le HTML afin de rester disponible sans JavaScript.
    C'est ce qui garantit qu'un robot d'indexation voit exactement le même
    contenu qu'un visiteur. */
@@ -130,6 +130,104 @@
     };
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
+  }
+
+  /* ── Démonstration de saisie ──────────────────────────────────────────
+     Les lignes existent dans le HTML pour rester compréhensibles sans JS ;
+     cette classe ne fait que rejouer leur apparition et le tracé des frises. */
+  var liveDemo = document.querySelector('[data-live-demo]');
+  if (liveDemo) {
+    var playDemo = function () {
+      liveDemo.classList.remove('is-playing');
+      void liveDemo.offsetWidth;
+      liveDemo.classList.add('is-playing');
+    };
+    var replay = liveDemo.querySelector('.demo-replay');
+    if (replay) replay.addEventListener('click', playDemo);
+    requestAnimationFrame(playDemo);
+  }
+
+  /* ── Intérêt pour la solution en ligne ──────────────────────────────── */
+  var onlineDialog = document.getElementById('online-dialog');
+  var onlineForm = document.getElementById('online-form');
+  var onlineEmail = document.getElementById('online-email');
+  var onlineConsent = document.getElementById('online-consent');
+  var onlineWebsite = document.getElementById('online-website');
+  var onlineSubmit = document.getElementById('online-submit');
+  var onlineStatus = document.getElementById('online-form-status');
+  var onlineTrigger = null;
+  var onlineEndpoint = 'https://api.chronofrise.com/api/public/online-interest';
+
+  function setOnlineStatus(message, state) {
+    if (!onlineStatus) return;
+    onlineStatus.textContent = message;
+    onlineStatus.classList.remove('is-success', 'is-error');
+    if (state) onlineStatus.classList.add('is-' + state);
+  }
+
+  if (onlineDialog && typeof onlineDialog.showModal === 'function') {
+    document.querySelectorAll('[data-online-open]').forEach(function (link) {
+      link.addEventListener('click', function (event) {
+        event.preventDefault();
+        onlineTrigger = link;
+        setOnlineStatus('', '');
+        onlineDialog.showModal();
+        if (onlineEmail) requestAnimationFrame(function () { onlineEmail.focus(); });
+      });
+    });
+
+    onlineDialog.querySelectorAll('[data-online-close]').forEach(function (button) {
+      button.addEventListener('click', function () { onlineDialog.close(); });
+    });
+
+    onlineDialog.addEventListener('click', function (event) {
+      if (event.target === onlineDialog) onlineDialog.close();
+    });
+
+    onlineDialog.addEventListener('close', function () {
+      if (onlineTrigger) onlineTrigger.focus();
+    });
+  }
+
+  if (onlineForm && onlineEmail && onlineConsent && onlineWebsite && onlineSubmit) {
+    onlineForm.addEventListener('submit', async function (event) {
+      event.preventDefault();
+      if (!onlineForm.checkValidity()) {
+        onlineForm.reportValidity();
+        return;
+      }
+
+      onlineSubmit.disabled = true;
+      onlineSubmit.textContent = 'Envoi en cours…';
+      onlineForm.setAttribute('aria-busy', 'true');
+      setOnlineStatus('', '');
+
+      try {
+        var response = await fetch(onlineEndpoint, {
+          method: 'POST',
+          mode: 'cors',
+          credentials: 'omit',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            email: onlineEmail.value.trim(),
+            consent: onlineConsent.checked,
+            website: onlineWebsite.value,
+            sourcePath: window.location.pathname + window.location.search
+          })
+        });
+        var result = await response.json().catch(function () { return null; });
+        if (!response.ok || !result || result.ok !== true) throw new Error('interest_request_failed');
+
+        onlineForm.reset();
+        setOnlineStatus('Merci. Votre demande a bien été enregistrée.', 'success');
+      } catch (error) {
+        setOnlineStatus('Impossible d’enregistrer votre demande pour le moment. Veuillez réessayer dans quelques instants.', 'error');
+      } finally {
+        onlineSubmit.disabled = false;
+        onlineSubmit.textContent = 'Envoyer ma demande';
+        onlineForm.removeAttribute('aria-busy');
+      }
+    });
   }
 
   /* ── Apparition des blocs ────────────────────────────────────────────── */

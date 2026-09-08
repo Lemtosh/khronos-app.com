@@ -28,7 +28,7 @@
 
 <link rel="icon" href="../favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="../assets/img/logo-chronofrise-256.png">
-<link rel="stylesheet" href="../assets/css/style.css?v=20260907a">
+<link rel="stylesheet" href="../assets/css/style.css?v=20260908c">
 
 <script type="application/ld+json">
 {
@@ -49,7 +49,7 @@
       "description": "Comment se calcule le coefficient de réduction-majoration : période de référence, réduction de 5 % par année sans sinistre, majoration de 25 % par sinistre responsable, plancher 0,50 et plafond 3,50.",
       "inLanguage": "fr-FR",
       "datePublished": "2026-09-07",
-      "dateModified": "2026-09-07",
+      "dateModified": "2026-09-08",
       "author": { "@id": "https://chronofrise.com/#organisation" },
       "publisher": { "@id": "https://chronofrise.com/#organisation" },
       "isPartOf": { "@id": "https://chronofrise.com/#site" },
@@ -176,7 +176,7 @@
 
         <h2 id="definition">Ce que le CRM mesure</h2>
         <p>
-          Le coefficient de réduction-majoration — le « bonus-malus » — est un multiplicateur
+          Le coefficient de réduction-majoration, aussi appelé « bonus-malus », est un multiplicateur
           appliqué à la prime de référence du contrat. La prime de référence est celle qui
           correspondrait au véhicule, à la zone et au profil retenus par l'assureur ; le CRM la
           module en fonction du passé de l'assuré.
@@ -189,9 +189,9 @@
         </p>
         <p>
           Le mécanisme s'applique aux véhicules terrestres à moteur à usage privé ou
-          professionnel courant. Certaines catégories en sont exclues — deux-roues de faible
-          cylindrée selon les contrats, véhicules de collection, engins agricoles, flottes —
-          auquel cas le relevé d'information ne porte pas de coefficient et l'antériorité
+          professionnel courant. Certaines catégories en sont exclues : deux-roues de faible
+          cylindrée selon les contrats, véhicules de collection, engins agricoles et flottes.
+          Dans ces cas, le relevé d'information ne porte pas de coefficient et l'antériorité
           s'apprécie autrement.
         </p>
 
@@ -253,7 +253,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr><th scope="row">Départ</th><td>—</td><td><strong>1,00</strong></td><td>0 %</td></tr>
+              <tr><th scope="row">Départ</th><td>Valeur initiale</td><td><strong>1,00</strong></td><td>0 %</td></tr>
               <tr><th scope="row">1 an</th><td>1,00 × 0,95</td><td><strong>0,95</strong></td><td>5 %</td></tr>
               <tr><th scope="row">2 ans</th><td>0,95 × 0,95 = 0,9025</td><td><strong>0,90</strong></td><td>10 %</td></tr>
               <tr><th scope="row">3 ans</th><td>0,90 × 0,95 = 0,855</td><td><strong>0,85</strong></td><td>15 %</td></tr>
@@ -294,15 +294,15 @@
 
         <h3>Un exemple complet sur cinq ans</h3>
         <dl>
-          <dt>Année 1 — aucun sinistre</dt>
+          <dt>Année 1 : aucun sinistre</dt>
           <dd>1,00 × 0,95 = <strong>0,95</strong></dd>
-          <dt>Année 2 — aucun sinistre</dt>
+          <dt>Année 2 : aucun sinistre</dt>
           <dd>0,95 × 0,95 = 0,9025 → <strong>0,90</strong></dd>
-          <dt>Année 3 — un sinistre responsable</dt>
+          <dt>Année 3 : un sinistre responsable</dt>
           <dd>0,90 × 1,25 = 1,125 → <strong>1,12</strong></dd>
-          <dt>Année 4 — un sinistre à responsabilité partagée</dt>
+          <dt>Année 4 : un sinistre à responsabilité partagée</dt>
           <dd>1,12 × 1,125 = 1,26 → <strong>1,26</strong></dd>
-          <dt>Année 5 — aucun sinistre</dt>
+          <dt>Année 5 : aucun sinistre</dt>
           <dd>1,26 × 0,95 = 1,197 → <strong>1,19</strong></dd>
         </dl>
         <p>
@@ -320,7 +320,7 @@
         </p>
         <p>
           Un assuré à 2,44 qui ne déclare rien pendant deux périodes de référence repasse donc
-          à 1,00 — et non à 2,20 par application de deux réductions de 5 %. C'est une remise à
+          à 1,00, et non à 2,20 par application de deux réductions de 5 %. C'est une remise à
           plat, pas une décrue.
         </p>
 
@@ -352,14 +352,14 @@
         <p>
           Ils restent pourtant mentionnés sur le relevé, et un assureur les regarde : une
           sinistralité élevée sans responsabilité reste une sinistralité. La distinction est
-          donc à faire dans les deux sens — ne pas majorer un coefficient à tort, ne pas
+          donc à faire dans les deux sens : ne pas majorer un coefficient à tort et ne pas
           ignorer un historique chargé.
         </p>
 
         <h2 id="perte">Quand le coefficient se perd</h2>
         <p>
           Le CRM suit l'assuré tant que la couverture est continue. Passé une interruption
-          prolongée — en pratique <strong>deux ans sans assurance</strong> —, l'antériorité
+          prolongée, en pratique <strong>deux ans sans assurance</strong>, l'antériorité
           n'est plus reprise et le coefficient repart à 1,00. Un client au bonus 0,50 depuis
           dix ans peut ainsi revenir sur le marché à 1,00 après vingt-cinq mois sans véhicule.
         </p>
