@@ -1,6 +1,6 @@
 /* ChronoFrise, site vitrine.
-   Quatre comportements : version courante, menu mobile, liseré de l'en-tête
-   au défilement et apparition des blocs. Le téléchargement garde une URL de
+   Six comportements : version courante, menu mobile, liseré de l'en-tête,
+   démonstration, demande en ligne et apparition des blocs. Le téléchargement garde une URL de
    secours dans le HTML afin de rester disponible sans JavaScript.
    C'est ce qui garantit qu'un robot d'indexation voit exactement le même
    contenu qu'un visiteur. */
@@ -130,6 +130,77 @@
     };
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
+  }
+
+  /* ── Démonstration de saisie ──────────────────────────────────────────
+     Les lignes existent dans le HTML pour rester compréhensibles sans JS ;
+     cette classe ne fait que rejouer leur apparition et le tracé des frises. */
+  var liveDemo = document.querySelector('[data-live-demo]');
+  if (liveDemo) {
+    var playDemo = function () {
+      liveDemo.classList.remove('is-playing');
+      void liveDemo.offsetWidth;
+      liveDemo.classList.add('is-playing');
+    };
+    var replay = liveDemo.querySelector('.demo-replay');
+    if (replay) replay.addEventListener('click', playDemo);
+    requestAnimationFrame(playDemo);
+  }
+
+  /* ── Intérêt pour la solution en ligne ────────────────────────────────
+     Le site est entièrement statique : l'adresse n'est donc jamais stockée
+     ici. La soumission prépare un e-mail adressé à ChronoFrise. */
+  var onlineDialog = document.getElementById('online-dialog');
+  var onlineForm = document.getElementById('online-form');
+  var onlineEmail = document.getElementById('online-email');
+  var onlineStatus = document.getElementById('online-form-status');
+  var onlineTrigger = null;
+
+  if (onlineDialog && typeof onlineDialog.showModal === 'function') {
+    document.querySelectorAll('[data-online-open]').forEach(function (link) {
+      link.addEventListener('click', function (event) {
+        event.preventDefault();
+        onlineTrigger = link;
+        onlineDialog.showModal();
+        if (onlineEmail) requestAnimationFrame(function () { onlineEmail.focus(); });
+      });
+    });
+
+    onlineDialog.querySelectorAll('[data-online-close]').forEach(function (button) {
+      button.addEventListener('click', function () { onlineDialog.close(); });
+    });
+
+    onlineDialog.addEventListener('click', function (event) {
+      if (event.target === onlineDialog) onlineDialog.close();
+    });
+
+    onlineDialog.addEventListener('close', function () {
+      if (onlineTrigger) onlineTrigger.focus();
+    });
+  }
+
+  if (onlineForm && onlineEmail) {
+    onlineForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+      if (!onlineEmail.checkValidity()) {
+        onlineEmail.reportValidity();
+        return;
+      }
+
+      var subject = 'Demande de solution ChronoFrise en ligne';
+      var body = [
+        'Bonjour,',
+        '',
+        'Je souhaite être informé(e) de la solution ChronoFrise accessible en ligne, sans installation.',
+        '',
+        'Mon adresse : ' + onlineEmail.value.trim(),
+        '',
+        'Merci.'
+      ].join('\n');
+
+      if (onlineStatus) onlineStatus.textContent = 'Votre messagerie va s’ouvrir avec la demande préremplie.';
+      window.location.href = 'mailto:contact@chronofrise.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    });
   }
 
   /* ── Apparition des blocs ────────────────────────────────────────────── */
