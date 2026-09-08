@@ -147,20 +147,30 @@
     requestAnimationFrame(playDemo);
   }
 
-  /* ── Intérêt pour la solution en ligne ────────────────────────────────
-     Le site est entièrement statique : l'adresse n'est donc jamais stockée
-     ici. La soumission prépare un e-mail adressé à ChronoFrise. */
+  /* ── Intérêt pour la solution en ligne ──────────────────────────────── */
   var onlineDialog = document.getElementById('online-dialog');
   var onlineForm = document.getElementById('online-form');
   var onlineEmail = document.getElementById('online-email');
+  var onlineConsent = document.getElementById('online-consent');
+  var onlineWebsite = document.getElementById('online-website');
+  var onlineSubmit = document.getElementById('online-submit');
   var onlineStatus = document.getElementById('online-form-status');
   var onlineTrigger = null;
+  var onlineEndpoint = 'https://api.chronofrise.com/api/public/online-interest';
+
+  function setOnlineStatus(message, state) {
+    if (!onlineStatus) return;
+    onlineStatus.textContent = message;
+    onlineStatus.classList.remove('is-success', 'is-error');
+    if (state) onlineStatus.classList.add('is-' + state);
+  }
 
   if (onlineDialog && typeof onlineDialog.showModal === 'function') {
     document.querySelectorAll('[data-online-open]').forEach(function (link) {
       link.addEventListener('click', function (event) {
         event.preventDefault();
         onlineTrigger = link;
+        setOnlineStatus('', '');
         onlineDialog.showModal();
         if (onlineEmail) requestAnimationFrame(function () { onlineEmail.focus(); });
       });
@@ -179,27 +189,44 @@
     });
   }
 
-  if (onlineForm && onlineEmail) {
-    onlineForm.addEventListener('submit', function (event) {
+  if (onlineForm && onlineEmail && onlineConsent && onlineWebsite && onlineSubmit) {
+    onlineForm.addEventListener('submit', async function (event) {
       event.preventDefault();
-      if (!onlineEmail.checkValidity()) {
-        onlineEmail.reportValidity();
+      if (!onlineForm.checkValidity()) {
+        onlineForm.reportValidity();
         return;
       }
 
-      var subject = 'Demande de solution ChronoFrise en ligne';
-      var body = [
-        'Bonjour,',
-        '',
-        'Je souhaite être informé(e) de la solution ChronoFrise accessible en ligne, sans installation.',
-        '',
-        'Mon adresse : ' + onlineEmail.value.trim(),
-        '',
-        'Merci.'
-      ].join('\n');
+      onlineSubmit.disabled = true;
+      onlineSubmit.textContent = 'Envoi en cours…';
+      onlineForm.setAttribute('aria-busy', 'true');
+      setOnlineStatus('', '');
 
-      if (onlineStatus) onlineStatus.textContent = 'Votre messagerie va s’ouvrir avec la demande préremplie.';
-      window.location.href = 'mailto:contact@chronofrise.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+      try {
+        var response = await fetch(onlineEndpoint, {
+          method: 'POST',
+          mode: 'cors',
+          credentials: 'omit',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            email: onlineEmail.value.trim(),
+            consent: onlineConsent.checked,
+            website: onlineWebsite.value,
+            sourcePath: window.location.pathname + window.location.search
+          })
+        });
+        var result = await response.json().catch(function () { return null; });
+        if (!response.ok || !result || result.ok !== true) throw new Error('interest_request_failed');
+
+        onlineForm.reset();
+        setOnlineStatus('Merci. Votre demande a bien été enregistrée.', 'success');
+      } catch (error) {
+        setOnlineStatus('Impossible d’enregistrer votre demande pour le moment. Veuillez réessayer dans quelques instants.', 'error');
+      } finally {
+        onlineSubmit.disabled = false;
+        onlineSubmit.textContent = 'Envoyer ma demande';
+        onlineForm.removeAttribute('aria-busy');
+      }
     });
   }
 

@@ -30,7 +30,7 @@
 
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="assets/img/logo-chronofrise-256.png">
-<link rel="stylesheet" href="assets/css/style.css?v=20260908b">
+<link rel="stylesheet" href="assets/css/style.css?v=20260908c">
 
 <!-- Données structurées : décrit le logiciel à Google (encart produit, prix, plateforme). -->
 <script type="application/ld+json" data-software-schema>
@@ -226,7 +226,7 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"/></svg>
               Télécharger pour Windows
             </a>
-            <a class="btn btn-lg btn-on-dark" href="mailto:contact@chronofrise.com?subject=Demande%20de%20solution%20ChronoFrise%20en%20ligne" data-online-open>Préférer la version en ligne</a>
+            <a class="btn btn-lg btn-on-dark" href="#online-dialog" data-online-open>Préférer la version en ligne</a>
           </div>
 
           <ul class="hero-trust">
@@ -810,7 +810,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"/></svg>
             Télécharger pour Windows
           </a>
-          <a class="btn btn-lg btn-on-dark" href="mailto:contact@chronofrise.com?subject=Demande%20de%20solution%20ChronoFrise%20en%20ligne" data-online-open>Demander la solution en ligne</a>
+          <a class="btn btn-lg btn-on-dark" href="#online-dialog" data-online-open>Demander la solution en ligne</a>
         </div>
         <p class="fine">3,99 € TTC par mois · 7 jours d'essai · sans engagement</p>
       </div>
@@ -877,7 +877,7 @@
 </footer>
 
 <dialog class="online-dialog" id="online-dialog" aria-labelledby="online-dialog-title">
-  <form class="online-form" id="online-form" action="mailto:contact@chronofrise.com" method="post" enctype="text/plain">
+  <form class="online-form" id="online-form">
     <div class="online-dialog-head">
       <div>
         <p class="eyebrow">Sans installation</p>
@@ -888,9 +888,16 @@
     <p>Vous préférez créer un compte et utiliser ChronoFrise dans votre navigateur ? Laissez votre adresse pour nous signaler votre intérêt et être recontacté.</p>
     <label for="online-email">Votre adresse e-mail professionnelle</label>
     <input id="online-email" name="email" type="email" autocomplete="email" placeholder="vous@entreprise.fr" required>
-    <input type="hidden" name="demande" value="Je souhaite être informé de la solution ChronoFrise en ligne.">
-    <button class="btn btn-primary btn-block" type="submit">Envoyer ma demande</button>
-    <p class="form-note">Votre messagerie s'ouvrira avec un message prérempli à contact@chronofrise.com. Aucune donnée n'est enregistrée par ce site.</p>
+    <div class="form-honeypot" aria-hidden="true">
+      <label for="online-website">Votre site internet</label>
+      <input id="online-website" name="website" type="text" tabindex="-1" autocomplete="off">
+    </div>
+    <label class="consent-field" for="online-consent">
+      <input id="online-consent" name="consent" type="checkbox" required>
+      <span>J’accepte que ChronoFrise enregistre mon adresse e-mail afin de me recontacter au sujet de la version en ligne.</span>
+    </label>
+    <button class="btn btn-primary btn-block" id="online-submit" type="submit">Envoyer ma demande</button>
+    <p class="form-note">Seules votre adresse e-mail et la page d’origine de la demande sont enregistrées. Consultez notre <a href="confidentialite.html">politique de confidentialité</a>.</p>
     <p class="form-status" id="online-form-status" role="status" aria-live="polite"></p>
   </form>
 </dialog>
