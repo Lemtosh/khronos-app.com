@@ -22,6 +22,7 @@ fichier, on l'édite, on le déploie tel quel.
 ├── mentions-legales.html
 ├── confidentialite.html
 ├── 404.html
+├── CLAUDE.md                  règles de rédaction
 ├── robots.txt · sitemap.xml · favicon.ico
 └── assets/
     ├── css/style.css          SOURCE UNIQUE des couleurs et des primitives
@@ -42,12 +43,15 @@ fichier, on l'édite, on le déploie tel quel.
   préfixées par `.js` dans le CSS : sans la classe posée par `main.js`, rien n'est masqué.
   Un robot d'indexation voit exactement le même contenu qu'un visiteur.
 - **L'en-tête et le pied de page sont dupliqués dans chaque page.** C'est le prix d'un site
-  sans build. Une modification de navigation se répercute dans les 10 fichiers HTML.
+  sans build. Une modification de navigation se répercute dans les 11 fichiers HTML.
 - **Les URL publiques n'ont pas de `.html`.** Cloudflare Pages sert `/tarifs` et redirige
-  `/tarifs.html` en 308. Les URL absolues — `canonical`, `og:url`, `sitemap.xml`, JSON-LD —
+  `/tarifs.html` en 308. Les URL absolues (`canonical`, `og:url`, `sitemap.xml`, JSON-LD)
   s'écrivent donc **sans extension**, sans quoi Search Console les classe « Page avec
   redirection » et ne les indexe pas. Les liens internes relatifs gardent le `.html` :
   c'est ce qui permet la prévisualisation locale, et Cloudflare les redirige.
+- **Les règles de rédaction sont dans [CLAUDE.md](CLAUDE.md).** Pas de tiret cadratin
+  dans la prose, première personne du singulier, longueurs de titres variées : un site
+  trop régulier se lit comme un site généré.
 - **Toute nouvelle page s'ajoute à `sitemap.xml`** et porte ses propres `<title>`,
   `description`, `canonical` et balises Open Graph. Deux pages ne partagent jamais le même
   titre.
@@ -56,7 +60,7 @@ fichier, on l'édite, on le déploie tel quel.
   les pages produit. Les questions de la `FAQPage` doivent reprendre mot pour mot celles du
   `<details>` correspondant : Google recoupe les deux.
 - **Le CSS est versionné par `?v=AAAAMMJJx`.** Toute modification de
-  `assets/css/style.css` s'accompagne d'un bump de ce paramètre dans les 10 pages.
+  `assets/css/style.css` s'accompagne d'un bump de ce paramètre dans les 11 pages.
 
 ## À compléter avant la mise en ligne
 
