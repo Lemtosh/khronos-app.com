@@ -19,18 +19,18 @@
 <meta property="og:url" content="https://chronofrise.com/">
 <meta property="og:title" content="ChronoFrise : vérification des antécédents d'assurance auto et moto">
 <meta property="og:description" content="Reconstituez la frise d'assurance, vérifiez le CRM et repérez interruptions, bonus incohérents et sinistres non impactés. Application Windows, 100 % locale.">
-<meta property="og:image" content="https://chronofrise.com/assets/img/chronofrise-ecran.png">
-<meta property="og:image:width" content="1494">
-<meta property="og:image:height" content="933">
-<meta property="og:image:alt" content="L'écran de ChronoFrise : saisie des antécédents, tableau des périodes et frise chronologique.">
+<meta property="og:image" content="https://chronofrise.com/assets/img/Chronofrise.png">
+<meta property="og:image:width" content="1964">
+<meta property="og:image:height" content="965">
+<meta property="og:image:alt" content="La fenêtre de ChronoFrise : saisie des antécédents à gauche, tableau des périodes au centre, frise chronologique à droite.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="ChronoFrise : vérification des antécédents d'assurance">
 <meta name="twitter:description" content="Frise d'assurance, calcul du CRM et incohérences du relevé d'information vérifiés en quelques minutes, sans sortie de données.">
-<meta name="twitter:image" content="https://chronofrise.com/assets/img/chronofrise-ecran.png">
+<meta name="twitter:image" content="https://chronofrise.com/assets/img/Chronofrise.png">
 
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="assets/img/logo-chronofrise-256.png">
-<link rel="stylesheet" href="assets/css/style.css?v=20260909a">
+<link rel="stylesheet" href="assets/css/style.css?v=20260909b">
 
 <!-- Données structurées : décrit le logiciel à Google (encart produit, prix, plateforme). -->
 <script type="application/ld+json" data-software-schema>
@@ -65,7 +65,7 @@
         "availability": "https://schema.org/InStock",
         "description": "Abonnement mensuel à 3,99 € TTC, 7 jours d'essai gratuit, sans engagement. Offre de lancement : 50 % de réduction pour les 20 premiers clients avec le code LANCEMENT50."
       },
-      "screenshot": "https://chronofrise.com/assets/img/chronofrise-ecran.png",
+      "screenshot": "https://chronofrise.com/assets/img/Chronofrise.png",
       "author": { "@id": "https://chronofrise.com/#johann" },
       "softwareHelp": "https://chronofrise.com/guides/"
     },
@@ -88,7 +88,7 @@
     {
       "@type": "Person",
       "@id": "https://chronofrise.com/#johann",
-      "name": "Johann",
+      "name": "Johann Philippon",
       "jobTitle": "Chargé de formation en courtage d'assurance",
       "description": "Chargé de formation dans un cabinet de courtage en assurance de particuliers, auteur de ChronoFrise.",
       "knowsAbout": [
@@ -98,6 +98,7 @@
         "Courtage en assurance"
       ],
       "worksFor": { "@id": "https://chronofrise.com/#organisation" },
+      "sameAs": ["https://www.linkedin.com/in/j-philippon/"],
       "url": "https://chronofrise.com/#origine"
     },
     {
@@ -322,7 +323,7 @@
         <div class="origin-copy">
           <h2>Pourquoi j'ai écrit ChronoFrise</h2>
           <p>
-            Je m'appelle Johann, je suis chargé de formation dans un cabinet de courtage
+            Je m'appelle Johann Philippon, je suis chargé de formation dans un cabinet de courtage
             en assurance de particuliers. Une bonne part de mon travail consiste à
             apprendre à des collaborateurs comment lire un relevé d'information, et à
             repasser derrière les dossiers quand quelque chose ne concorde pas.
@@ -345,13 +346,17 @@
             Restait une contrainte que je ne pouvais pas contourner : ces données sont
             celles de nos clients. Hors de question de les recopier dans un tableur partagé
             ou de les déposer sur un service en ligne. C'est pour cela que ChronoFrise
-            s'installe sur le poste au lieu d'être un site — la question de la conformité
+            s'installe sur le poste au lieu d'être un site : la question de la conformité
             était réglée avant la première ligne de code.
           </p>
-          <p class="origin-sign">
-            <strong>Johann</strong>
+          <div class="origin-sign">
+            <strong>Johann Philippon</strong>
             <span>Chargé de formation en courtage d'assurance · auteur de ChronoFrise</span>
-          </p>
+            <a href="https://www.linkedin.com/in/j-philippon/" rel="me noopener" target="_blank">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM2.4 21h5.16V9.2H2.4V21zM10.2 9.2V21h5.16v-6.36c0-3.36 4.32-3.63 4.32 0V21h5.16v-8.14c0-7.2-8.04-6.94-9.48-3.4V9.2H10.2z"/></svg>
+              Profil LinkedIn
+            </a>
+          </div>
         </div>
 
         <aside class="origin-aside reveal">
@@ -493,6 +498,13 @@
   <!-- ══ Lecture de l'écran ═════════════════════════════════════════════ -->
   <section class="band-soft">
     <div class="wrap">
+      <figure class="screenshot reveal">
+        <img src="assets/img/Chronofrise.png"
+             alt="La fenêtre de ChronoFrise sur un dossier ouvert : à gauche la fiche véhicule, le permis et les antécédents ; au centre le tableau des périodes d'assurance ; à droite la frise chronologique, la couverture retenue et le commentaire à copier."
+             width="1964" height="965" loading="lazy" decoding="async">
+        <figcaption>Un dossier ouvert dans ChronoFrise, sur un jeu de données de démonstration.</figcaption>
+      </figure>
+
       <div class="split">
         <div>
           <h2>Un seul écran</h2>
@@ -696,7 +708,7 @@
           <div class="faq-body">
             <p>
               Uniquement sur votre poste, dans l'espace de stockage local de l'application.
-              Aucune donnée de dossier n'est transmise à un serveur, à nous ou à un tiers.
+              Aucune donnée de dossier n'est transmise à un serveur, à moi ou à un tiers.
             </p>
             <p>
               Vous pouvez exporter l'ensemble de vos dossiers et de vos réglages dans un
@@ -729,7 +741,7 @@
             <p>
               Cette reconnaissance s'achète : elle passe par un certificat de signature de code
               qui coûte plusieurs centaines d'euros par an. Dès que les abonnements le
-              financeront, l'installeur sera signé, notre nom remplacera « Éditeur inconnu » et
+              financeront, l'installeur sera signé, mon nom remplacera « Éditeur inconnu » et
               l'avertissement disparaîtra. <a href="telechargement/index.html#smartscreen">L'écran
               en question, en images</a>.
             </p>
@@ -916,7 +928,7 @@
       </div>
       <button class="dialog-close" type="button" data-online-close aria-label="Fermer la fenêtre">×</button>
     </div>
-    <p>Vous préférez créer un compte et utiliser ChronoFrise dans votre navigateur ? Laissez votre adresse pour nous signaler votre intérêt et être recontacté.</p>
+    <p>Vous préférez créer un compte et utiliser ChronoFrise dans votre navigateur ? Laissez votre adresse pour me signaler votre intérêt et être recontacté.</p>
     <label for="online-email">Votre adresse e-mail professionnelle</label>
     <input id="online-email" name="email" type="email" autocomplete="email" placeholder="vous@entreprise.fr" required>
     <div class="form-honeypot" aria-hidden="true">
@@ -928,7 +940,7 @@
       <span>J’accepte que ChronoFrise enregistre mon adresse e-mail afin de me recontacter au sujet de la version en ligne.</span>
     </label>
     <button class="btn btn-primary btn-block" id="online-submit" type="submit">Envoyer ma demande</button>
-    <p class="form-note">Seules votre adresse e-mail et la page d’origine de la demande sont enregistrées. Consultez notre <a href="confidentialite.html">politique de confidentialité</a>.</p>
+    <p class="form-note">Seules votre adresse e-mail et la page d’origine de la demande sont enregistrées. Consultez la <a href="confidentialite.html">politique de confidentialité</a>.</p>
     <p class="form-status" id="online-form-status" role="status" aria-live="polite"></p>
   </form>
 </dialog>

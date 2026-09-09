@@ -1176,6 +1176,19 @@ table.compare .no { color: var(--muted); }
 }
 .origin-sign strong { color: var(--text); font-size: 1.02rem; }
 .origin-sign span { color: var(--muted); font-size: 0.87rem; }
+.origin-sign a {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.55rem;
+  color: var(--coral-deep);
+  font-size: 0.87rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.origin-sign a:hover { text-decoration: underline; }
+.origin-sign a svg { width: 15px; height: 15px; flex: none; }
 
 .origin-aside {
   padding: clamp(1.3rem, 3vw, 1.8rem);
@@ -1264,3 +1277,23 @@ table.compare .no { color: var(--muted); }
 .hamon-cal b { padding: 0.16rem 0; border-radius: 4px; color: var(--app-text); font-weight: 500; }
 .hamon-cal b.out { color: #c2c8d4; }
 .hamon-cal b.today { background: var(--app-blue); color: #fff; font-weight: 700; }
+
+/* ── La capture de l'application, en pleine largeur ────────────────────────
+   Les dimensions sont posées dans le HTML : la place est réservée avant le
+   chargement, ce qui évite le décalage de mise en page compté par Google. */
+.screenshot {
+  margin: 0 0 clamp(2.5rem, 5vw, 3.5rem);
+  overflow: hidden;
+  border: 1px solid var(--app-border);
+  border-radius: var(--radius-lg);
+  background: var(--app-field);
+  box-shadow: var(--shadow-lg);
+}
+.screenshot img { width: 100%; }
+.screenshot figcaption {
+  padding: 0.8rem 1.1rem;
+  border-top: 1px solid var(--border);
+  background: var(--card);
+  color: var(--muted);
+  font-size: 0.86rem;
+}
