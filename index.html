@@ -30,7 +30,7 @@
 
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="assets/img/logo-chronofrise-256.png">
-<link rel="stylesheet" href="assets/css/style.css?v=20260908c">
+<link rel="stylesheet" href="assets/css/style.css?v=20260909a">
 
 <!-- Données structurées : décrit le logiciel à Google (encart produit, prix, plateforme). -->
 <script type="application/ld+json" data-software-schema>
@@ -66,6 +66,7 @@
         "description": "Abonnement mensuel à 3,99 € TTC, 7 jours d'essai gratuit, sans engagement. Offre de lancement : 50 % de réduction pour les 20 premiers clients avec le code LANCEMENT50."
       },
       "screenshot": "https://chronofrise.com/assets/img/chronofrise-ecran.png",
+      "author": { "@id": "https://chronofrise.com/#johann" },
       "softwareHelp": "https://chronofrise.com/guides/"
     },
     {
@@ -76,12 +77,28 @@
       "logo": "https://chronofrise.com/assets/img/logo-chronofrise-256.png",
       "description": "Éditeur de ChronoFrise, application de bureau de vérification des antécédents d'assurance auto et moto.",
       "email": "contact@chronofrise.com",
+      "founder": { "@id": "https://chronofrise.com/#johann" },
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "service client",
         "email": "contact@chronofrise.com",
         "availableLanguage": "fr"
       }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://chronofrise.com/#johann",
+      "name": "Johann",
+      "jobTitle": "Chargé de formation en courtage d'assurance",
+      "description": "Chargé de formation dans un cabinet de courtage en assurance de particuliers, auteur de ChronoFrise.",
+      "knowsAbout": [
+        "Assurance automobile",
+        "Coefficient de réduction-majoration",
+        "Relevé d'information",
+        "Courtage en assurance"
+      ],
+      "worksFor": { "@id": "https://chronofrise.com/#organisation" },
+      "url": "https://chronofrise.com/#origine"
     },
     {
       "@type": "WebSite",
@@ -188,7 +205,6 @@
     </nav>
 
     <div class="nav-cta">
-      <!-- TODO : remplacer par l'URL réelle de l'installeur (GitHub Releases ou /telechargements/…). -->
       <a class="btn btn-primary" href="telechargement/index.html">Télécharger</a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Ouvrir le menu">
         <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
@@ -252,44 +268,45 @@
             <button class="demo-replay" type="button" aria-label="Rejouer la saisie des périodes">Rejouer</button>
           </div>
           <div class="window-body">
-            <div class="demo-appbar"><strong><span></span> Khronos</strong><small>Données enregistrées localement</small></div>
+            <div class="demo-appbar"><strong><span></span> ChronoFrise</strong><small>Données enregistrées localement</small></div>
             <div class="demo-tabs" aria-label="Dossiers ouverts">
-              <span class="demo-tab active"><b></b>DZ-316-BF <i>×</i></span>
+              <span class="demo-tab"><b></b>DAVID MARTIN <i>×</i></span>
+              <span class="demo-tab active"><b></b>LINA FATARI <i>×</i></span>
               <span class="demo-add">+</span>
             </div>
             <div class="demo-contract">
-              <span><small>RÉFÉRENCE CONTRAT</small><strong>DZ-316-BF</strong></span>
-              <span><small>DATE D'EFFET</small><strong>05/09/2026</strong></span>
+              <span><small>RÉFÉRENCE CONTRAT</small><strong>DF-415-TR</strong></span>
+              <span><small>DATE D'EFFET</small><strong>09/09/2026</strong></span>
               <span><small>MODE</small><strong>Moto</strong></span>
             </div>
             <div class="hero-demo-grid">
               <div class="demo-periods">
                 <div class="demo-panel-title">PÉRIODES SAISIES</div>
                 <div class="demo-table-head"><span>#</span><span>TYPE</span><span>DÉBUT</span><span>FIN</span><span>IMMAT.</span></div>
-                <div class="demo-period" style="--delay:.25s"><span>1</span><b>AUTO</b><strong>05/09/2023</strong><strong>10/10/2024</strong><em>DZ-316-BF</em></div>
-                <div class="demo-period" style="--delay:1.15s"><span>2</span><b>AUTO</b><strong>01/12/2024</strong><strong>15/02/2026</strong><em>ER-589-YJ</em></div>
-                <div class="demo-period" style="--delay:2.05s"><span>3</span><b>AUTO</b><strong>05/04/2026</strong><strong>05/09/2026</strong><em>GC-842-PQ</em></div>
+                <div class="demo-period" style="--delay:.25s"><span>1</span><b>AUTO</b><strong>09/09/2023</strong><strong>10/10/2025</strong><em>DZ-316-BF</em></div>
+                <div class="demo-period" style="--delay:1.15s"><span>2</span><b>AUTO</b><strong>14/04/2024</strong><strong>25/08/2025</strong><em>ET-785-FE</em></div>
+                <div class="demo-period" style="--delay:2.05s"><span>3</span><b>AUTO</b><strong>15/01/2026</strong><strong>29/08/2026</strong><em>DF-415-TR</em></div>
               </div>
               <div class="demo-frise-panel">
                 <div class="demo-panel-title">FRISE ANTÉCÉDENTS — 36 MOIS</div>
                 <div class="demo-years"><span>2024</span><span>2025</span><span>2026</span></div>
                 <div class="demo-frise-row" style="--delay:.45s">
                   <strong><i class="plate-dot violet"></i>DZ-316-BF</strong>
-                  <div class="demo-track"><span class="demo-bar violet" style="--left:0%;--width:36%"></span></div>
+                  <div class="demo-track"><span class="demo-bar violet" style="--left:0%;--width:69%"></span></div>
                 </div>
                 <div class="demo-frise-row" style="--delay:1.35s">
-                  <strong><i class="plate-dot amber"></i>ER-589-YJ</strong>
-                  <div class="demo-track"><span class="demo-bar amber" style="--left:42%;--width:40%"></span></div>
+                  <strong><i class="plate-dot amber"></i>ET-785-FE</strong>
+                  <div class="demo-track"><span class="demo-bar amber" style="--left:20%;--width:45%"></span></div>
                 </div>
                 <div class="demo-frise-row" style="--delay:2.25s">
-                  <strong><i class="plate-dot green"></i>GC-842-PQ</strong>
-                  <div class="demo-track"><span class="demo-bar green" style="--left:86%;--width:14%"></span></div>
+                  <strong><i class="plate-dot pink"></i>DF-415-TR</strong>
+                  <div class="demo-track"><span class="demo-bar pink" style="--left:78%;--width:21%"></span></div>
                 </div>
                 <div class="demo-result" style="--delay:3.05s">
-                  <span>Couverture : <strong>32 mois</strong></span>
-                  <span>Interruptions : <strong>4 mois</strong></span>
+                  <span>Couverture : <strong>33 mois</strong></span>
+                  <span>Interruption : <strong>3 mois</strong></span>
                 </div>
-                <div class="demo-warning" style="--delay:3.35s"><b>!</b><span>Deux interruptions d'assurance détectées</span></div>
+                <div class="demo-warning" style="--delay:3.35s"><b>!</b><span>Deux coupures et deux périodes qui se chevauchent</span></div>
               </div>
             </div>
           </div>
@@ -298,53 +315,68 @@
     </div>
   </section>
 
-  <!-- ══ Le problème ════════════════════════════════════════════════════ -->
-  <section>
+  <!-- ══ Pourquoi l'outil existe ═══════════════════════════════════════ -->
+  <section id="origine">
     <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">Le constat</p>
-        <h2>Un relevé d'information ne se lit pas, il faut pouvoir voir au-delà.</h2>
-        <p>
-          Trois dates, un contrat, un sinistre : le calcul tient sur un coin de table.
-          Six périodes, plusieurs véhicules et des interruptions, il ne tient plus.
-          Et ce qui passe à travers ne se voit qu'à la déclaration de sinistre.
-        </p>
-      </div>
-
-      <div class="grid grid-3">
-        <article class="card card-hover reveal">
-          <span class="card-icon is-red" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h5m8 0h5"/><path d="M11 8v8M13 8v8" stroke-dasharray="2 3"/></svg>
-          </span>
-          <h3>Les interruptions d'assurance</h3>
+      <div class="origin">
+        <div class="origin-copy">
+          <h2>Pourquoi j'ai écrit ChronoFrise</h2>
           <p>
-            Entre la fin d'un contrat et le début du suivant, quelques semaines suffisent à
-            changer la tarification. Alignées à la main, deux périodes qui se chevauchent ou
-            se manquent de peu se ressemblent beaucoup. C'était avant ChronoFrise.
+            Je m'appelle Johann, je suis chargé de formation dans un cabinet de courtage
+            en assurance de particuliers. Une bonne part de mon travail consiste à
+            apprendre à des collaborateurs comment lire un relevé d'information, et à
+            repasser derrière les dossiers quand quelque chose ne concorde pas.
           </p>
-        </article>
-
-        <article class="card card-hover reveal">
-          <span class="card-icon is-amber" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 16H3L12 3z"/><path d="M12 9v4M12 16.5v.5"/></svg>
-          </span>
-          <h3>Un CRM se vérifie plus vite</h3>
           <p>
-            À chaque échéance sans sinistre responsable, un assuré gagne 5 %. Mais prenez-vous
-            toujours en compte sa date de permis et sa sinistralité ? ChronoFrise le fait pour vous.
+            Le dossier qui m'a décidé ressemblait à des dizaines d'autres. Un CRM annoncé
+            d'un côté. De l'autre, des périodes d'assurance qui se chevauchent, un véhicule
+            vendu en cours de contrat, une reprise plusieurs mois plus tard. Pour savoir si
+            le coefficient déclaré était seulement atteignable, il fallait aligner les dates
+            à la main, compter les mois d'assurance, retrancher les interruptions, puis
+            rejouer chaque échéance. Avec un client en face et un devis à sortir, ce travail
+            ne se fait pas.
           </p>
-        </article>
-
-        <article class="card card-hover reveal">
-          <span class="card-icon is-amber" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-          </span>
-          <h3>Un sinistre deux mois avant l'échéance</h3>
           <p>
-            Si un sinistre est déclaré dans les deux mois avant une échéance, ou si le permis
-            ne permet pas d'avoir le CRM déclaré avec cette sinistralité, ChronoFrise vous le dira.
+            Une frise, on la lit d'un coup d'œil. Une colonne de dates, il faut la
+            reconstruire dans sa tête à chaque dossier, et c'est là qu'on se trompe.
+            Je voulais poser l'historique à plat et le voir.
           </p>
-        </article>
+          <p>
+            Restait une contrainte que je ne pouvais pas contourner : ces données sont
+            celles de nos clients. Hors de question de les recopier dans un tableur partagé
+            ou de les déposer sur un service en ligne. C'est pour cela que ChronoFrise
+            s'installe sur le poste au lieu d'être un site — la question de la conformité
+            était réglée avant la première ligne de code.
+          </p>
+          <p class="origin-sign">
+            <strong>Johann</strong>
+            <span>Chargé de formation en courtage d'assurance · auteur de ChronoFrise</span>
+          </p>
+        </div>
+
+        <aside class="origin-aside reveal">
+          <h3>Ce qui passe le plus souvent à travers</h3>
+          <ol>
+            <li>
+              <strong>L'interruption d'assurance.</strong> Quelques semaines entre deux
+              contrats suffisent à changer la tarification, et deux périodes qui se manquent
+              de peu ressemblent beaucoup à deux périodes qui se chevauchent.
+            </li>
+            <li>
+              <strong>Le CRM impossible.</strong> Un coefficient annoncé qu'aucune
+              combinaison de date de permis et de sinistralité ne permet d'atteindre.
+            </li>
+            <li>
+              <strong>Le sinistre non impacté.</strong> Déclaré dans les deux mois qui
+              précèdent l'échéance, il n'est pas encore répercuté sur le coefficient que
+              porte le relevé.
+            </li>
+            <li>
+              <strong>Le permis trop récent.</strong> Descendre à 0,50 demande treize années
+              sans sinistre responsable. Un permis de 2012 ne les a pas.
+            </li>
+          </ol>
+        </aside>
       </div>
     </div>
   </section>
@@ -354,10 +386,10 @@
     <div class="wrap">
       <div class="section-head centered">
         <p class="eyebrow">Ce que fait ChronoFrise</p>
-        <h2>Vous saisissez. ChronoFrise calcule et vous alerte.</h2>
+        <h2>Six contrôles qui se déclenchent à la frappe</h2>
         <p>
-          Aucune importation, aucun connecteur, aucun paramétrage préalable : vous recopiez
-          ce que dit le relevé, et les contrôles se déclenchent à mesure de la saisie.
+          Vous recopiez ce que dit le relevé. Il n'y a ni import à préparer ni connecteur à
+          brancher, et le résultat se met à jour à chaque champ rempli.
         </p>
       </div>
 
@@ -366,14 +398,15 @@
           <div class="feature-copy">
             <span class="feature-number">01</span>
             <h3>La frise chronologique</h3>
-            <p>Toutes les périodes sont placées sur le même axe. Une plaque par ligne sépare immédiatement les véhicules ; couleurs, chevauchements, interruptions, couverture totale et durée de coupure reprennent l'affichage réel de ChronoFrise.</p>
+            <p>Une plaque par ligne, toutes sur le même axe. Le chevauchement entre les deux premiers contrats se voit sans avoir à comparer quatre dates, et le coefficient repris à la fin de chaque période est affiché avec son motif de sortie.</p>
           </div>
-          <div class="app-panel timeline-example" role="img" aria-label="Exemple ChronoFrise avec trois plaques et trois périodes sur des lignes distinctes">
-            <div class="app-panel-head"><strong>FRISE ANTÉCÉDENTS — 36 MOIS</strong><span>2024&nbsp;&nbsp;&nbsp; 2025&nbsp;&nbsp;&nbsp; 2026</span></div>
-            <div class="mini-timeline"><b><i class="plate-dot violet"></i>DZ-316-BF</b><div class="demo-track"><span class="demo-bar violet" style="--left:0%;--width:38%"></span></div></div>
-            <div class="mini-timeline"><b><i class="plate-dot amber"></i>ER-589-YJ</b><div class="demo-track"><span class="demo-bar amber" style="--left:44%;--width:35%"></span></div></div>
-            <div class="mini-timeline"><b><i class="plate-dot green"></i>GC-842-PQ</b><div class="demo-track"><span class="demo-bar green" style="--left:85%;--width:15%"></span></div></div>
-            <div class="app-metrics"><span>Couverture : <strong>32 mois</strong></span><span class="metric-amber">Interruption : <strong>4 mois</strong></span></div>
+          <div class="app-panel timeline-example" role="img" aria-label="Frise ChronoFrise : trois immatriculations sur trois lignes, dont deux périodes qui se chevauchent et deux coupures">
+            <div class="app-panel-head"><strong>FRISE ANTÉCÉDENTS — 36 MOIS</strong><span>09/09/2023 → 09/09/2026</span></div>
+            <div class="mini-timeline"><b><i class="plate-dot violet"></i>DZ-316-BF<em>0,72 NPP</em></b><div class="demo-track"><span class="demo-bar violet" style="--left:0%;--width:69%"></span></div></div>
+            <div class="mini-timeline"><b><i class="plate-dot amber"></i>ET-785-FE<em>0,58 VENTE</em></b><div class="demo-track"><span class="demo-bar amber" style="--left:20%;--width:45%"></span></div></div>
+            <div class="mini-timeline"><b><i class="plate-dot pink"></i>DF-415-TR<em>0,50 AGGRAVATION</em></b><div class="demo-track"><span class="demo-bar pink" style="--left:78%;--width:21%"></span></div></div>
+            <div class="app-metrics"><span>Couverture : <strong>33 mois</strong> — 32 mois pleins + 15j de reliquat</span><span class="metric-amber">Interruption : <strong>3 mois</strong></span></div>
+            <div class="gap-chips"><span>10/10/2025 → 15/01/2026 (3m 7j)</span><span>29/08/2026 → 09/09/2026 (11j)</span></div>
           </div>
         </article>
 
@@ -381,13 +414,13 @@
           <div class="feature-copy">
             <span class="feature-number">02</span>
             <h3>Le calcul du CRM</h3>
-            <p>ChronoFrise rejoue chaque échéance, applique les sinistres engageants et la date du permis, puis tronque le coefficient à deux décimales à chaque étape. Le CRM déclaré est comparé au minimum réellement atteignable.</p>
+            <p>Chaque échéance est rejouée à partir de la date de permis, avec les sinistres engageants à leur place et une troncature à deux décimales à chaque étape. Le coefficient annoncé est confronté au minimum réellement atteignable, et l'écart est expliqué en toutes lettres.</p>
           </div>
           <div class="app-panel crm-example">
-            <div class="app-panel-head"><strong>CONTRÔLE DU CRM</strong><span>Calcul automatique</span></div>
-            <div class="crm-fields"><label>CRM déclaré <strong>0,68</strong></label><span>→</span><label>CRM minimum calculé <strong>0,76</strong></label></div>
-            <div class="calc-steps"><span>1,00</span><i>× 0,95</i><span>0,95</span><i>× 1,25</i><span>1,18</span><i>× 0,95</i><span>1,12</span></div>
-            <div class="app-alert red"><b>!</b><span><strong>CRM incompatible</strong> Le coefficient déclaré ne peut pas être atteint avec le permis et la sinistralité saisis.</span></div>
+            <div class="app-panel-head"><strong>CONTRÔLE DU CRM</strong><span>Permis du 16/06/2012</span></div>
+            <div class="crm-fields"><label>CRM déclaré <strong>0,50</strong></label><span>→</span><label>Minimum atteignable <strong>0,59</strong></label></div>
+            <div class="calc-steps"><span>0,65</span><i>× 1,25</i><span>0,81</span><i>× 0,95</i><span>0,76</span><i>× 0,95</i><span>0,72</span></div>
+            <div class="app-alert red"><b>!</b><span><strong>CRM déclaré 0,50 incohérent</strong> Avec le sinistre à 100 % du 15/02/2023 (échéance du 01/01/2024), le coefficient minimum atteignable est 0,59. Une année comportant un sinistre engageant ne bénéficie pas de la réduction de 5 %, et chaque calcul est tronqué à deux décimales.</span></div>
           </div>
         </article>
 
@@ -427,8 +460,8 @@
             <p>Le rouge signale une contradiction démontrée. L'ambre demande un contrôle humain. La couleur, le titre et le détail rendent la priorité compréhensible sans interprétation.</p>
           </div>
           <div class="app-panel alerts-example">
-            <div class="app-alert red"><b>!</b><span><strong>CRM déclaré impossible</strong> 0,68 annoncé, 0,76 au mieux avec les données du dossier.</span></div>
-            <div class="app-alert amber"><b>!</b><span><strong>Sinistre à vérifier</strong> Déclaré moins de deux mois avant l'échéance du 05/09/2026.</span></div>
+            <div class="app-alert red"><b>!</b><span><strong>CRM déclaré impossible</strong> 0,50 annoncé, 0,59 au mieux avec le permis et la sinistralité du dossier.</span></div>
+            <div class="app-alert amber"><b>!</b><span><strong>Sinistre à vérifier</strong> Déclaré le 15/02/2023, moins de deux mois avant l'échéance du 01/01/2024 : il n'est pas encore répercuté sur le coefficient du relevé.</span></div>
             <div class="alert-legend"><span><i class="red"></i>Contradiction certaine</span><span><i class="amber"></i>Vérification nécessaire</span></div>
           </div>
         </article>
@@ -437,12 +470,16 @@
           <div class="feature-copy">
             <span class="feature-number">06</span>
             <h3>Les outils du quotidien</h3>
-            <p>Calcul d'écart entre deux dates, échéance Hamon et calculatrice CRM sont disponibles dans la barre du haut. Ils s'ouvrent sans quitter le dossier en cours.</p>
+            <p>Trois boutons dans la barre du haut : calculatrice CRM, écart entre deux dates, échéance Hamon. Ils s'ouvrent par-dessus le dossier en cours, sans rien fermer ni faire perdre la saisie.</p>
           </div>
           <div class="app-panel tools-example">
-            <div class="tool-tabs"><span class="active">▦ CRM</span><span>▣ Calc</span><span>▣ Hamon</span></div>
-            <div class="tool-body"><label>Coefficient actuel<strong>0,80</strong></label><span>+ 1 sinistre responsable</span><label>Nouveau coefficient<strong>1,00</strong></label></div>
-            <small>Coefficient calculé et tronqué à deux décimales</small>
+            <div class="tool-tabs"><span>▦ CRM</span><span>▣ Calc</span><span class="active">▤ Hamon</span></div>
+            <div class="hamon-pop">
+              <strong>LOI HAMON</strong>
+              <label>Date d'envoi du courrier<em>JJ/MM/AAAA</em></label>
+              <div class="hamon-cal"><span class="hamon-month">‹ Septembre 2026 ›</span><i>L</i><i>M</i><i>M</i><i>J</i><i>V</i><i>S</i><i>D</i><b class="out">31</b><b>1</b><b>2</b><b>3</b><b>4</b><b>5</b><b>6</b><b>7</b><b>8</b><b class="today">9</b><b>10</b><b>11</b><b>12</b><b>13</b></div>
+            </div>
+            <small>La date de résiliation possible se déduit de la date d'envoi</small>
           </div>
         </article>
       </div>
@@ -458,12 +495,11 @@
     <div class="wrap">
       <div class="split">
         <div>
-          <p class="eyebrow">Un seul écran</p>
-          <h2>Tout le dossier tient sous les yeux.</h2>
+          <h2>Un seul écran</h2>
           <p class="lead mt-2">
-            Pas de navigation, pas d'onglets à retrouver : la saisie à gauche, les périodes
-            au centre, la frise et le résultat à droite. Les trois colonnes se redimensionnent
-            au glisser-déposer et gardent votre réglage.
+            La saisie à gauche, les périodes au centre, la frise et le résultat à droite.
+            Rien à ouvrir, rien à replier. Les trois colonnes se redimensionnent au
+            glisser-déposer et gardent votre réglage d'une session à l'autre.
           </p>
 
           <ul class="checklist mt-3">
@@ -487,22 +523,22 @@
         </div>
 
         <div class="workspace-preview reveal" role="img" aria-label="Aperçu de la barre ChronoFrise avec quatre espaces de travail ouverts">
-          <div class="workspace-top"><strong><i></i>Khronos <small>Portable</small></strong><span>Données enregistrées localement</span></div>
+          <div class="workspace-top"><strong><i></i>ChronoFrise <small>Portable</small></strong><span>Données enregistrées localement</span></div>
           <div class="workspace-tools"><span>▦ CRM</span><span>▣ Calc</span><span>▣ Hamon</span></div>
           <div class="workspace-tabs">
-            <span><i class="saved"></i>DZ-316-BF <b>×</b></span>
-            <span class="active"><i class="saved"></i>ER-589-YJ <b>×</b></span>
-            <span><i class="editing"></i>GC-842-PQ <b>×</b></span>
-            <span><i class="saved"></i>CLIENT MARTIN <b>×</b></span>
+            <span><i class="saved"></i>AUTOALL478563 <b>×</b></span>
+            <span><i class="saved"></i>AUTALL781423 <b>×</b></span>
+            <span><i class="editing"></i>DAVID MARTIN <b>×</b></span>
+            <span class="active"><i class="saved"></i>LINA FATARI <b>×</b></span>
             <button type="button" tabindex="-1" aria-hidden="true">+</button>
           </div>
           <div class="workspace-card">
-            <span><small>RÉFÉRENCE CONTRAT</small><strong>ER-589-YJ</strong></span>
-            <span><small>DATE D'EFFET</small><strong>05/09/2026</strong></span>
-            <span><small>MODE</small><strong>Auto</strong></span>
+            <span><small>RÉFÉRENCE CONTRAT</small><strong>DF-415-TR</strong></span>
+            <span><small>DATE D'EFFET</small><strong>09/09/2026</strong></span>
+            <span><small>MODE</small><strong>Moto</strong></span>
             <em><i></i>Sauvegardé</em>
           </div>
-          <p>Quatre dossiers restent accessibles sans perdre la saisie ni le résultat de chacun.</p>
+          <p>On nomme les onglets comme on veut : la référence du devis, le nom du client. Quatre dossiers ouverts en même temps, aucun ne perd sa saisie.</p>
         </div>
       </div>
     </div>
@@ -512,8 +548,7 @@
   <section>
     <div class="wrap">
       <div class="section-head centered">
-        <p class="eyebrow">En pratique</p>
-        <h2>Trois minutes, du relevé à la conclusion.</h2>
+        <h2>Comment ça se passe</h2>
       </div>
 
       <div class="steps">
@@ -548,12 +583,11 @@
     <div class="wrap">
       <div class="split">
         <div>
-          <p class="eyebrow">Confidentialité</p>
           <h2>Les données de vos clients ne quittent pas votre poste.</h2>
           <p class="lead mt-2" style="color: rgba(255,255,255,0.72);">
-            Ce n'est pas une promesse contractuelle, c'est une propriété de l'application :
-            ChronoFrise n'a pas de serveur, pas de compte, pas de base de données distante.
-            Il n'y a rien à envoyer, donc rien à intercepter.
+            ChronoFrise n'a ni serveur ni base de données distante. Il n'y a rien à envoyer,
+            donc rien à intercepter. C'est la contrainte qui a décidé de l'architecture de
+            l'application, et elle n'est pas négociable.
           </p>
 
           <div class="btn-row mt-3">
@@ -592,8 +626,8 @@
     <div class="wrap">
       <div class="section-head centered">
         <p class="eyebrow">Aujourd'hui et demain</p>
-        <h2>ChronoFrise s'étendra à tous vos dossiers.</h2>
-        <p>La version actuelle se concentre sur l'assurance des particuliers. Les prochaines évolutions prolongeront le même principe : voir plus vite, calculer juste et garder la maîtrise des données.</p>
+        <h2>La suite</h2>
+        <p>La version actuelle couvre l'assurance des particuliers. Ce qui vient ensuite garde le même principe : tout se voit sur une frise, et rien ne quitte le poste. Je préfère annoncer deux chantiers réels qu'une feuille de route en douze points.</p>
       </div>
       <div class="roadmap-grid">
         <article class="roadmap-card current reveal">
@@ -623,8 +657,7 @@
   <section id="faq">
     <div class="wrap">
       <div class="section-head centered">
-        <p class="eyebrow">Questions fréquentes</p>
-        <h2>Ce qu'on nous demande le plus souvent</h2>
+        <h2>Questions fréquentes</h2>
       </div>
 
       <div class="faq">
@@ -754,8 +787,7 @@
   <section class="band-soft">
     <div class="wrap">
       <div class="section-head centered">
-        <p class="eyebrow">Guides</p>
-        <h2>Les règles que ChronoFrise applique.</h2>
+        <h2>Les règles derrière le calcul</h2>
         <p>
           Le coefficient de réduction-majoration, le contenu du relevé d'information, l'effet
           d'un sinistre responsable et la limite liée au permis sont appliqués automatiquement.
@@ -863,7 +895,6 @@
       <div>
         <h4>Contact</h4>
         <ul>
-          <!-- TODO : adresse de contact définitive. -->
           <li><a href="mailto:contact@chronofrise.com">contact@chronofrise.com</a></li>
         </ul>
       </div>

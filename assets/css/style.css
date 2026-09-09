@@ -40,6 +40,7 @@
   --app-text: #182238;
   --app-muted: #667085;
   --app-border: #d8dee9;
+  --app-pink: #e8368f;
 
   --shadow-sm: 0 1px 2px rgba(13, 15, 19, 0.06);
   --shadow: 0 2px 12px rgba(13, 15, 19, 0.07);
@@ -610,6 +611,8 @@ section { padding-block: clamp(3.5rem, 8vw, 6.5rem); }
 .demo-bar.amber { background: var(--amber); }
 .plate-dot.green,
 .demo-bar.green { background: var(--green); }
+.plate-dot.pink,
+.demo-bar.pink { background: var(--app-pink); }
 .demo-track {
   position: relative;
   height: 13px;
@@ -1148,3 +1151,116 @@ table.compare .no { color: var(--muted); }
   .btn-lg { padding-inline: 1.25rem; }
   .btn-row > .btn { max-width: 100%; }
 }
+
+
+/* ── Origine : le mot de l'auteur ──────────────────────────────────────────
+   Une colonne de texte suivi, pas une grille de cartes : cette section doit
+   se lire comme une lettre, c'est tout son intérêt. */
+.origin {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: clamp(2rem, 5vw, 3.5rem);
+  align-items: start;
+}
+.origin-copy { max-width: 62ch; }
+.origin-copy h2 { margin-bottom: 1.2rem; }
+.origin-copy p { color: var(--muted); }
+.origin-copy p + p { margin-top: 1rem; }
+.origin-copy p:first-of-type { color: var(--text); font-size: 1.06rem; }
+.origin-sign {
+  display: grid;
+  gap: 0.1rem;
+  margin-top: 1.9rem;
+  padding-left: 1rem;
+  border-left: 3px solid var(--coral);
+}
+.origin-sign strong { color: var(--text); font-size: 1.02rem; }
+.origin-sign span { color: var(--muted); font-size: 0.87rem; }
+
+.origin-aside {
+  padding: clamp(1.3rem, 3vw, 1.8rem);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--card);
+  box-shadow: var(--shadow-sm);
+}
+.origin-aside h3 { font-size: 1.02rem; margin-bottom: 1.1rem; }
+.origin-aside ol { counter-reset: origin; list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; }
+.origin-aside li {
+  counter-increment: origin;
+  position: relative;
+  padding-left: 2.1rem;
+  color: var(--muted);
+  font-size: 0.93rem;
+}
+.origin-aside li::before {
+  content: counter(origin);
+  position: absolute;
+  left: 0;
+  top: 0.15rem;
+  display: grid;
+  place-items: center;
+  width: 1.4rem;
+  height: 1.4rem;
+  border: 1px solid var(--coral-border);
+  border-radius: 50%;
+  background: var(--coral-bg);
+  color: var(--coral-deep);
+  font-size: 0.72rem;
+  font-weight: 750;
+}
+.origin-aside strong { color: var(--text); font-weight: 650; }
+
+@media (max-width: 880px) {
+  .origin { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* ── Frise : le coefficient repris en fin de période et les coupures ────── */
+.mini-timeline > b em {
+  margin-left: auto;
+  color: var(--app-muted);
+  font-style: normal;
+  letter-spacing: 0.04em;
+}
+.gap-chips { display: flex; flex-wrap: wrap; gap: 0.35rem; padding: 0.1rem 0.7rem 0.35rem; }
+.gap-chips span {
+  padding: 0.14rem 0.45rem;
+  border: 1px solid rgba(245, 158, 11, 0.42);
+  border-radius: 999px;
+  background: rgba(245, 158, 11, 0.1);
+  color: #9a5a00;
+  font-size: 0.6rem;
+}
+
+/* ── L'outil Hamon tel qu'il s'ouvre dans la barre du haut ─────────────── */
+.hamon-pop {
+  margin: 0.7rem;
+  padding: 0.7rem 0.75rem 0.8rem;
+  border: 1px solid var(--app-border);
+  border-radius: 8px;
+  background: var(--card);
+  box-shadow: var(--shadow);
+}
+.hamon-pop > strong { display: block; color: var(--app-text); font-size: 0.62rem; letter-spacing: 0.06em; }
+.hamon-pop > label { display: grid; gap: 0.22rem; margin-top: 0.55rem; color: var(--app-muted); font-size: 0.58rem; }
+.hamon-pop > label em {
+  padding: 0.34rem 0.45rem;
+  border: 1px solid var(--app-border);
+  border-radius: 6px;
+  background: var(--app-surface);
+  color: var(--app-muted);
+  font-style: italic;
+}
+.hamon-cal {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.15rem;
+  margin-top: 0.65rem;
+  text-align: center;
+  font-size: 0.55rem;
+}
+.hamon-month { grid-column: 1 / -1; margin-bottom: 0.25rem; color: var(--app-text); font-weight: 700; }
+.hamon-cal i { color: var(--app-muted); font-style: normal; font-weight: 700; }
+.hamon-cal b { padding: 0.16rem 0; border-radius: 4px; color: var(--app-text); font-weight: 500; }
+.hamon-cal b.out { color: #c2c8d4; }
+.hamon-cal b.today { background: var(--app-blue); color: #fff; font-weight: 700; }
